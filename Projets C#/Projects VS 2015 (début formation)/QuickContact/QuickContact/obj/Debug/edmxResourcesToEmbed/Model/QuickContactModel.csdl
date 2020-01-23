@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBContactModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Nom" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Telephone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdCategorie" Type="Guid" />
+    <NavigationProperty Name="Categorie" Relationship="DBContactModel.Tbl_Contacts_Categorie" FromRole="Contact" ToRole="TBL_Categories" />
+  </EntityType>
+  <EntityContainer Name="MaDAL" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Contacts" EntityType="DBContactModel.Contact" />
+    <EntitySet Name="Categories" EntityType="DBContactModel.Categorie" />
+    <AssociationSet Name="Tbl_Contacts_Categorie" Association="DBContactModel.Tbl_Contacts_Categorie">
+      <End Role="TBL_Categories" EntitySet="Categories" />
+      <End Role="Contact" EntitySet="Contacts" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Categorie">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Intitule" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Contacts" Relationship="DBContactModel.Tbl_Contacts_Categorie" FromRole="TBL_Categories" ToRole="Contact" />
+  </EntityType>
+  <Association Name="Tbl_Contacts_Categorie">
+    <End Type="DBContactModel.Categorie" Role="TBL_Categories" Multiplicity="0..1" />
+    <End Type="DBContactModel.Contact" Role="Contact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Categories">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Contact">
+        <PropertyRef Name="IdCategorie" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

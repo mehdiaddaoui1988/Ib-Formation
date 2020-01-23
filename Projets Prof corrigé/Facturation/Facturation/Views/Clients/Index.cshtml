@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Facturation.Models.Client>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<menu> <a class="btn btn-warning" asp-action="Create">Nouveau client</a></menu>
+<hr/>
+
+<div class="dm-table links">
+
+        <div role="header">
+            <div role="cell">
+                @Html.DisplayNameFor(model => model.RaisonSociale)
+            </div>
+            <div role="cell">
+                @Html.DisplayNameFor(model => model.Remarque)
+            </div>
+            <div role="cell">
+                @Html.DisplayNameFor(model => model.Mail)
+            </div>
+            <div role="cell">
+                @Html.DisplayNameFor(model => model.CA)
+            </div>
+            <div  role="cell"></div>
+        </div>
+  
+
+@foreach (var item in Model) {
+        <div role="row" onclick="window.location='@Url.Action("Details",new { id=item.Id})'">
+            <div role="cell">
+                @Html.DisplayFor(modelItem => item.RaisonSociale)
+            </div>
+            <div  role="cell">
+                @Html.DisplayFor(modelItem => item.Remarque)
+            </div>
+            <div  role="cell">
+                @Html.DisplayFor(modelItem => item.Mail)
+            </div>
+            <div role="cell">
+                @Html.DisplayFor(modelItem => item.CA)
+            </div>
+            <div role="cell">
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </div>
+        </div>
+}
+    </tbody>
+</div>

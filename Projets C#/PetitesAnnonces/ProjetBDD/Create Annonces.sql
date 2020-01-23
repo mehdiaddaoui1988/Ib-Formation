@@ -1,0 +1,13 @@
+﻿
+
+
+CREATE TABLE tbl_Annonces(
+	FK_Categorie VARCHAR(1) NOT NULL,
+	Id UNIQUEIDENTIFIER NOT NULL PRIMARY KEY DEFAULT newid(),
+	NomVendeur NVARCHAR(30),
+	Date_Annonce DATETIME NOT NULL,
+	Prix NVARCHAR(10),
+	Descritptif TEXT,
+	Numero_De_Tel NVARCHAR(10)
+
+)

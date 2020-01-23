@@ -1,0 +1,62 @@
+<div id="surface-config">
+  <h2>Configuration :</h2>
+  <p>Bienvenue sur notre super jeu.</p>
+
+  <form id="form-config">
+    <div class="form-group">
+      <label for="input-nombreMaximum">Nombre maximum :</label>
+      <input type="number" class="form-control" id="input-nombreMaximum" required min="1" max="1000000" value="100"
+        placeholder="Saisissez le nombre maximum" />
+    </div>
+
+    <div class="form-group">
+      <label for="input-nombreEssaisMax">Nombre d'essais maximum :</label>
+      <input type="number" class="form-control" id="input-nombreEssaisMax" required min="1" max="20" value="7"
+        placeholder="Saisissez le nombre d'essais maximum" />
+    </div>
+
+    <button type="submit" class="btn btn-lg btn-outline-primary">
+      Valider et commencer la partie
+    </button>
+  </form>
+</div>
+
+<div id="surface-jeu" class="invisible">
+  <h2>Partie en cours, bonne chance !</h2>
+
+  <form id="form-jeu">
+    <div class="form-group">
+      <label for="input-nombreTente">Nombre :</label>
+      <input type="number" class="form-control" id="input-nombreTente" required min="0"
+        placeholder="Saisissez un nombre" />
+    </div>
+
+    <button type="submit" class="btn btn-lg btn-outline-primary">
+      Tenter ce nombre
+    </button>
+
+    <table id="table-resultats" class="table invisible">
+      <thead>
+        <tr>
+          <th>Nombre tenté</th>
+          <th>Date</th>
+          <th>Résultat</th>
+        </tr>
+      </thead>
+      <tbody id="tbody-resultats">
+
+      </tbody>
+    </table>
+  </form>
+</div>
+
+<div id="surface-gagne" class="invisible">
+  <h2>Vous avez gagné !</h2>
+  <input type="button" class="bouton-rejouer btn btn-lg btn-primary" value="Rejouer">
+</div>
+
+<div id="surface-perdu" class="invisible">
+  <h2>Vous avez perdu !</h2>
+  <input type="button" class="bouton-rejouer btn btn-lg btn-primary" value="Rejouer">
+</div>
+<script src="/juste-nombre/juste-nombre.js"></script>

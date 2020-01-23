@@ -1,0 +1,41 @@
+﻿@model Facturation.Models.Prestation
+
+
+<h1>Prestation sur <a asp-action="Details" asp-controller="Factures" asp-route-id="@Model.IdFacture">Facture @Html.DisplayFor(c=>Model.Facture.Numero)</a> pour <a asp-action="Details" asp-controller="Clients" asp-route-id="@Model.Facture.IdClient">@Model.Facture.Client.RaisonSociale</a></h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            @Html.HiddenFor(c=>c.IdFacture)
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MontantHT" class="control-label"></label>
+                <input asp-for="MontantHT" class="form-control" />
+                <span asp-validation-for="MontantHT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TauxTVA" class="control-label"></label>
+                <input asp-for="TauxTVA" class="form-control" />
+                <span asp-validation-for="TauxTVA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Remarque" class="control-label"></label>
+                <input asp-for="Remarque" class="form-control" />
+                <span asp-validation-for="Remarque" class="text-danger"></span>
+            </div>
+           
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+

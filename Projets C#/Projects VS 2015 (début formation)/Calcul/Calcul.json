@@ -1,0 +1,25 @@
+{
+
+  "NombreDeQuestions": 4,
+  "NombreMaxDesValeurs": 10,
+  "Etat": 1,
+  "Questions": [
+    {
+      "Nombre1": 3,
+      "Nombre2": 5,
+      "Operateur": 1,
+      "Response": 20,
+      "DateQuestionPosee": "2019-08-12 12:56:27.678",
+      "DateResponse"=64654656654654
+    },
+
+    {
+      "Nombre1": 3,
+      "Nombre2": 5,
+      "Operateur": 1,
+      "Response": 20,
+      "DateQuestionPosee": "2019-08-12 12:56:27.678",
+      "DateResponse"=64654656654654
+    }
+  ]
+}

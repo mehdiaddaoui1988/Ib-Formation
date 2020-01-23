@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TerrorDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TBL_Competences">
+    <Key>
+      <PropertyRef Name="PK_Competence" />
+    </Key>
+    <Property Name="PK_Competence" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Intitule" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TBL_Organisations">
+    <Key>
+      <PropertyRef Name="PK_Organisation" />
+    </Key>
+    <Property Name="PK_Organisation" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Nom" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Lieu" Type="nvarchar(max)" />
+    <Property Name="DateCreation" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TBL_Terroristes">
+    <Key>
+      <PropertyRef Name="PK_Terroriste" />
+    </Key>
+    <Property Name="PK_Terroriste" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Nom" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prenom" Type="nvarchar" MaxLength="50" />
+    <Property Name="Alias" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Telephone" Type="varchar" MaxLength="20" />
+    <Property Name="FK_Parain" Type="uniqueidentifier" />
+    <Property Name="FK_Organisation" Type="uniqueidentifier" />
+    <Property Name="MiseAPrix" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="NombreDeVictimes" Type="int" Nullable="false" />
+    <Property Name="Taille" Type="float" />
+    <Property Name="EstMort" Type="bit" />
+  </EntityType>
+  <EntityType Name="TBL_Terroristes_Competences">
+    <Key>
+      <PropertyRef Name="FK_Terroriste" />
+      <PropertyRef Name="FK_Competence" />
+    </Key>
+    <Property Name="FK_Terroriste" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FK_Competence" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Niveau" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_TBL_Terroristes_ToTBL_Organisations">
+    <End Role="TBL_Organisations" Type="Self.TBL_Organisations" Multiplicity="0..1" />
+    <End Role="TBL_Terroristes" Type="Self.TBL_Terroristes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Organisations">
+        <PropertyRef Name="PK_Organisation" />
+      </Principal>
+      <Dependent Role="TBL_Terroristes">
+        <PropertyRef Name="FK_Organisation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Terroristes_ToTBL_Terroristes">
+    <End Role="TBL_Terroristes" Type="Self.TBL_Terroristes" Multiplicity="0..1" />
+    <End Role="TBL_Terroristes1" Type="Self.TBL_Terroristes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Terroristes">
+        <PropertyRef Name="PK_Terroriste" />
+      </Principal>
+      <Dependent Role="TBL_Terroristes1">
+        <PropertyRef Name="FK_Parain" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TBL_Terroristes_CompetencesTOCompetences">
+    <End Role="TBL_Competences" Type="Self.TBL_Competences" Multiplicity="1" />
+    <End Role="TBL_Terroristes_Competences" Type="Self.TBL_Terroristes_Competences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Competences">
+        <PropertyRef Name="PK_Competence" />
+      </Principal>
+      <Dependent Role="TBL_Terroristes_Competences">
+        <PropertyRef Name="FK_Competence" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TBL_Terroristes_CompetencesTOTerroristes">
+    <End Role="TBL_Terroristes" Type="Self.TBL_Terroristes" Multiplicity="1" />
+    <End Role="TBL_Terroristes_Competences" Type="Self.TBL_Terroristes_Competences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Terroristes">
+        <PropertyRef Name="PK_Terroriste" />
+      </Principal>
+      <Dependent Role="TBL_Terroristes_Competences">
+        <PropertyRef Name="FK_Terroriste" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TerrorDBModelStoreContainer">
+    <EntitySet Name="TBL_Competences" EntityType="Self.TBL_Competences" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Organisations" EntityType="Self.TBL_Organisations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Terroristes" EntityType="Self.TBL_Terroristes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Terroristes_Competences" EntityType="Self.TBL_Terroristes_Competences" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_TBL_Terroristes_ToTBL_Organisations" Association="Self.FK_TBL_Terroristes_ToTBL_Organisations">
+      <End Role="TBL_Organisations" EntitySet="TBL_Organisations" />
+      <End Role="TBL_Terroristes" EntitySet="TBL_Terroristes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Terroristes_ToTBL_Terroristes" Association="Self.FK_TBL_Terroristes_ToTBL_Terroristes">
+      <End Role="TBL_Terroristes" EntitySet="TBL_Terroristes" />
+      <End Role="TBL_Terroristes1" EntitySet="TBL_Terroristes" />
+    </AssociationSet>
+    <AssociationSet Name="TBL_Terroristes_CompetencesTOCompetences" Association="Self.TBL_Terroristes_CompetencesTOCompetences">
+      <End Role="TBL_Competences" EntitySet="TBL_Competences" />
+      <End Role="TBL_Terroristes_Competences" EntitySet="TBL_Terroristes_Competences" />
+    </AssociationSet>
+    <AssociationSet Name="TBL_Terroristes_CompetencesTOTerroristes" Association="Self.TBL_Terroristes_CompetencesTOTerroristes">
+      <End Role="TBL_Terroristes" EntitySet="TBL_Terroristes" />
+      <End Role="TBL_Terroristes_Competences" EntitySet="TBL_Terroristes_Competences" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

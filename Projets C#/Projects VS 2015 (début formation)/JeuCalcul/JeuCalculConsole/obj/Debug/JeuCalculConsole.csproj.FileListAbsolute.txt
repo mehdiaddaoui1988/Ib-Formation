@@ -1,0 +1,8 @@
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuCalcul\JeuCalculConsole\bin\Debug\JeuCalculConsole.exe.config
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuCalcul\JeuCalculConsole\obj\Debug\JeuCalculConsole.csprojResolveAssemblyReference.cache
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuCalcul\JeuCalculConsole\bin\Debug\JeuCalculConsole.exe
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuCalcul\JeuCalculConsole\bin\Debug\JeuCalculConsole.pdb
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuCalcul\JeuCalculConsole\bin\Debug\JeuCalculMetier.dll
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuCalcul\JeuCalculConsole\bin\Debug\JeuCalculMetier.pdb
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuCalcul\JeuCalculConsole\obj\Debug\JeuCalculConsole.exe
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuCalcul\JeuCalculConsole\obj\Debug\JeuCalculConsole.pdb

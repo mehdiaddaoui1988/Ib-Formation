@@ -1,0 +1,2 @@
+c:\users\ib\documents\visual studio 2015\Projects\JeuArithmetique\JeuArithmetique\bin\Debug\JeuArithmetique.exe.config
+c:\users\ib\documents\visual studio 2015\Projects\JeuArithmetique\JeuArithmetique\obj\Debug\JeuArithmetique.csprojResolveAssemblyReference.cache

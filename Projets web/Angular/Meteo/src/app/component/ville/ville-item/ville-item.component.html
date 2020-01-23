@@ -1,0 +1,39 @@
+<div style="margin-bottom:1em;clear:both;">
+  <div
+    [style.background-color]="couleurBulle"
+    style="color:white;
+  width:3em;
+  height:3em;
+  border-radius:1.5em;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  float:left;
+  margin-right:0.5em;
+  text-align:center;
+  font-size: 1em;
+  cursor:pointer"
+  >
+    <span
+      style="font-size: 1.5em;
+       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+       user-select: none"
+    >
+      {{ ville.nom[0].toUpperCase() }}
+    </span>
+  </div>
+
+  <div
+    style="color:green;font-size: 1.2em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"
+  >
+    {{ ville.nom }}
+  </div>
+
+  <div
+    style="color:darkslategray;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"
+  >
+    {{ ville.latitude }}, {{ ville.longitude }}
+  </div>
+</div>

@@ -1,0 +1,49 @@
+<!-- liste fusées -->
+
+<div class="row">
+  <div class="col-md-4">
+    <ul *ngIf="fusees" class="list-group-flush liste-fusees" >
+      <li (click)="afficheListeLancementsTotal()" class="list-group-item list-group-item-primary">
+       <h2> Tous les lancements</h2>
+      </li>
+      <li
+        class="list-group-item"
+        *ngFor="let f of fusees"
+        [ngbPopover]="fusee"
+        triggers="mouseenter:mouseleave"
+        popoverTitle="{{ f.modele }}"
+        placement="right"
+        (mouseenter)="fuseeSelectionne = f"
+        (click)="fuseeSelectionne = f; afficheListeLancements(fuseeSelectionne)"
+      >
+        <app-fusee-item [fusee]="f"></app-fusee-item>
+      </li>
+    </ul>
+  </div>
+
+  <!-- liste lancements -->
+
+  <div *ngIf="lancementsAffiches;else aucun" class="liste-lancements col-md-8">
+    <div
+      *ngIf="lancementsAffiches.length > 0; else vide"
+      class="container"
+    >
+      <div class="row element" *ngFor="let l of lancementsAffiches">
+        <ul class="list-group">
+          <app-lancement-item [lancement]="l"></app-lancement-item>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #fusee>
+  <p>Entreprise : {{ fuseeSelectionne.entreprise }}</p>
+  <p>Nombre de vols : {{ fuseeSelectionne.nombreDeVols }}</p>
+</ng-template>
+<ng-template #vide>
+  <h1 style="color:white;">Pas de lancements associés à cette fusée</h1>
+</ng-template>
+<ng-template #aucun>
+  <h5 style="color:white;">Chargement...</h5>
+</ng-template>

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeuPenduMetier", "JeuPenduMetier\JeuPenduMetier.csproj", "{4709758C-3D17-4CD7-A511-E85E0A17A2BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeuPenduConsole", "JeuPenduCounsole\JeuPenduConsole.csproj", "{3BA0A81A-81B6-40B7-8DC6-BFD2D1181B6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeuPenduPersistence", "JeuPenduPersistence\JeuPenduPersistence.csproj", "{C85129EF-2972-4120-ADE6-861B51374DFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4709758C-3D17-4CD7-A511-E85E0A17A2BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4709758C-3D17-4CD7-A511-E85E0A17A2BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4709758C-3D17-4CD7-A511-E85E0A17A2BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4709758C-3D17-4CD7-A511-E85E0A17A2BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BA0A81A-81B6-40B7-8DC6-BFD2D1181B6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BA0A81A-81B6-40B7-8DC6-BFD2D1181B6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BA0A81A-81B6-40B7-8DC6-BFD2D1181B6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BA0A81A-81B6-40B7-8DC6-BFD2D1181B6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C85129EF-2972-4120-ADE6-861B51374DFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C85129EF-2972-4120-ADE6-861B51374DFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C85129EF-2972-4120-ADE6-861B51374DFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C85129EF-2972-4120-ADE6-861B51374DFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

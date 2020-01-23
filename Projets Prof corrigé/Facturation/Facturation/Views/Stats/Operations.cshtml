@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Facturation.Models.Operation>
+
+@{
+    ViewData["Title"] = "Operations";
+}
+
+<h1>Operations</h1>
+
+<div class="dm-table">
+
+    <div role="header">
+        <div role="cell">
+            @Html.DisplayNameFor(model => model.Date)
+        </div>
+        <div role="cell">
+            @Html.DisplayNameFor(model => model.Description)
+        </div>
+
+        <div role="cell">
+            @Html.DisplayNameFor(model => model.Montant)
+        </div>
+
+    </div>
+
+@foreach (var item in Model)
+{
+<div role="row" onclick="window.location='@Url.Action(item.Action, item.Controller, item.RouteData)'">
+    <div role="cell">
+        @Html.DisplayFor(modelItem => item.Date)
+    </div>
+    <div role="cell">
+        @Html.DisplayFor(modelItem => item.Description)
+    </div>
+
+    <div role="cell">
+        @Html.DisplayFor(modelItem => item.Montant)
+    </div>
+
+</div>
+
+}

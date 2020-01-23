@@ -1,0 +1,30 @@
+<div *ngIf="recettes; else vide" class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let r of recettes">
+      <div class="card-deck d-flex h-100" style="text-align: center;">
+        <div
+          class="card text-white bg-danger mb-3 justify-content-center align-self-center"
+        >
+          <recette-item
+            [class.selected]="r == recetteSelectionne"
+            [recette]="r"
+            (click)="recetteSelectionne = r"
+            triggers="click"
+            [ngbPopover]="popContent"
+            [popoverTitle]="popTitle"
+            popoverClass="popover"
+          ></recette-item>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #popContent>
+  <recette-details [recette]="recetteSelectionne"></recette-details>
+</ng-template>
+<ng-template #popTitle>
+  <p style="text-align: center;">{{ recetteSelectionne.nom }}</p>
+</ng-template>
+<ng-template #vide
+  ><h5 style="color: white;">En attente de résultats</h5></ng-template
+>

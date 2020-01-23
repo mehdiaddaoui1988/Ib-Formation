@@ -1,0 +1,37 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Compteur</title>
+</head>
+<body>
+    <h1>Compteur</h1>
+
+    La valeur du compteur est :  <span style="color:@(ViewBag.valeurCompteur>0 ? "green":"red")">
+        @ViewBag.valeurCompteur
+    </span>
+    <!-- if -->
+    @if (ViewBag.valeurCompteur < 0)
+    {
+        @ViewBag.avertissement
+    }
+    <select>
+        @for (var p = 1900; p <= DateTime.Now.Year; p++)
+            {
+                <option value="@p">- @p</option>
+            }
+     
+    </select>
+    <a href="/Intro/Compteur?valeurCompteur=@(ViewBag.valeurCompteur+1)">Ajouter 1</a>
+    <a href="/Intro/Compteur?valeurCompteur=@(ViewBag.valeurCompteur-1)">Retrancher 1</a>
+
+
+
+</body>
+</html>

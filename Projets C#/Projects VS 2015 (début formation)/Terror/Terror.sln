@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerrorConsole", "TerrorConsole\TerrorConsole.csproj", "{2919FE15-C7D3-4310-9174-3A3BD299798F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerrorWPFOld", "TerrorWPF\TerrorWPFOld.csproj", "{020D3E09-9414-40D1-A959-7432645958AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerrorWPF", "..\..\..\..\Desktop\TerrorWPF\TerrorWPF.csproj", "{F5212D2D-7BAA-442D-BBD8-84553782DE70}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2919FE15-C7D3-4310-9174-3A3BD299798F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2919FE15-C7D3-4310-9174-3A3BD299798F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2919FE15-C7D3-4310-9174-3A3BD299798F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2919FE15-C7D3-4310-9174-3A3BD299798F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{020D3E09-9414-40D1-A959-7432645958AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{020D3E09-9414-40D1-A959-7432645958AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{020D3E09-9414-40D1-A959-7432645958AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{020D3E09-9414-40D1-A959-7432645958AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5212D2D-7BAA-442D-BBD8-84553782DE70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5212D2D-7BAA-442D-BBD8-84553782DE70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5212D2D-7BAA-442D-BBD8-84553782DE70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5212D2D-7BAA-442D-BBD8-84553782DE70}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

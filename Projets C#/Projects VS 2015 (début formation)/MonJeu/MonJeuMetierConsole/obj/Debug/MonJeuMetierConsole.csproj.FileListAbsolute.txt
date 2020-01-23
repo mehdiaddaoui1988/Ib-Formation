@@ -1,0 +1,10 @@
+C:\Users\IB\documents\visual studio 2015\Projects\MonJeu\MonJeuMetierConsole\bin\Debug\MonJeuMetierConsole.exe.config
+C:\Users\IB\documents\visual studio 2015\Projects\MonJeu\MonJeuMetierConsole\bin\Debug\MonJeuMetierConsole.exe
+C:\Users\IB\documents\visual studio 2015\Projects\MonJeu\MonJeuMetierConsole\bin\Debug\MonJeuMetierConsole.pdb
+C:\Users\IB\documents\visual studio 2015\Projects\MonJeu\MonJeuMetierConsole\bin\Debug\MonJeuConsole.exe
+C:\Users\IB\documents\visual studio 2015\Projects\MonJeu\MonJeuMetierConsole\bin\Debug\MonJeuMetier.dll
+C:\Users\IB\documents\visual studio 2015\Projects\MonJeu\MonJeuMetierConsole\bin\Debug\MonJeuConsole.pdb
+C:\Users\IB\documents\visual studio 2015\Projects\MonJeu\MonJeuMetierConsole\bin\Debug\MonJeuMetier.pdb
+C:\Users\IB\documents\visual studio 2015\Projects\MonJeu\MonJeuMetierConsole\obj\Debug\MonJeuMetierConsole.csprojResolveAssemblyReference.cache
+C:\Users\IB\documents\visual studio 2015\Projects\MonJeu\MonJeuMetierConsole\obj\Debug\MonJeuMetierConsole.exe
+C:\Users\IB\documents\visual studio 2015\Projects\MonJeu\MonJeuMetierConsole\obj\Debug\MonJeuMetierConsole.pdb

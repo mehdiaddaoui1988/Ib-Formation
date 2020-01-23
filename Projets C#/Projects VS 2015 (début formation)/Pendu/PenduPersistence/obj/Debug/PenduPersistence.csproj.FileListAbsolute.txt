@@ -1,0 +1,7 @@
+C:\partage\Formation c#\Pendu\PenduPersistence\bin\Debug\PenduPersistence.dll
+C:\partage\Formation c#\Pendu\PenduPersistence\bin\Debug\PenduPersistence.pdb
+C:\partage\Formation c#\Pendu\PenduPersistence\bin\Debug\PenduMetier.dll
+C:\partage\Formation c#\Pendu\PenduPersistence\bin\Debug\PenduMetier.pdb
+C:\partage\Formation c#\Pendu\PenduPersistence\obj\Debug\PenduPersistence.csprojResolveAssemblyReference.cache
+C:\partage\Formation c#\Pendu\PenduPersistence\obj\Debug\PenduPersistence.dll
+C:\partage\Formation c#\Pendu\PenduPersistence\obj\Debug\PenduPersistence.pdb

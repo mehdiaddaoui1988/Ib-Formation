@@ -1,0 +1,10 @@
+C:\partage\Formation c#\Calcul\CalculConsole\bin\Release\CalculConsole.exe.config
+C:\partage\Formation c#\Calcul\CalculConsole\bin\Release\CalculConsole.exe
+C:\partage\Formation c#\Calcul\CalculConsole\bin\Release\CalculConsole.pdb
+C:\partage\Formation c#\Calcul\CalculConsole\bin\Release\CalculMetier.dll
+C:\partage\Formation c#\Calcul\CalculConsole\bin\Release\Helper.dll
+C:\partage\Formation c#\Calcul\CalculConsole\bin\Release\CalculMetier.pdb
+C:\partage\Formation c#\Calcul\CalculConsole\bin\Release\Helper.pdb
+C:\partage\Formation c#\Calcul\CalculConsole\obj\Release\CalculConsole.csprojResolveAssemblyReference.cache
+C:\partage\Formation c#\Calcul\CalculConsole\obj\Release\CalculConsole.exe
+C:\partage\Formation c#\Calcul\CalculConsole\obj\Release\CalculConsole.pdb

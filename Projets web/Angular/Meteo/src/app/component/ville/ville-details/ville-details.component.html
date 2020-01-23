@@ -1,0 +1,40 @@
+<div *ngIf="ville; else vide">
+  <!-- <h3>Prévisions pour {{ville.nom}} : </h3> -->
+  <ville-item class="selected" [ville]="ville"></ville-item>
+  <table
+    *ngIf="previsions && previsions.length > 0"
+    class="table table-striped"
+  >
+    <thead class="thead-dark">
+      <tr>
+        <th>Date</th>
+        <th>Température</th>
+        <th>Nébulosité</th>
+        <th>Probabilité de pluie</th>
+        <th>Phase de lune</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of previsions">
+        <td>{{ p.date | date: "dd/MM/yyyy" }}</td>
+        <td>
+          {{ p.temperature | number: ".1-1" }} °C /
+          {{ service.celsiusToFahrenheit(p.temperature) | number: ".1-1" }} °F
+        </td>
+        <td>{{ p.nebulosite }}</td>
+        <td>{{ p.probabilitePluie }} %</td>
+        <td>
+          <div
+            style="font-size: 4em;"
+            class="lune{{
+              service.getMoonPhase(p.date).fraction * 9 | number: '.0-0'
+            }}"
+          ></div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<ng-template #vide>
+  Pas de ville.
+</ng-template>

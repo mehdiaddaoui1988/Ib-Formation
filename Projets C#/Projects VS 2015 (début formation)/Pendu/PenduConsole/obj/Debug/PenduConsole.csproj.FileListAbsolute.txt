@@ -1,0 +1,15 @@
+C:\partage\Formation c#\Pendu\PenduConsole\bin\Debug\PenduConsole.exe.config
+C:\partage\Formation c#\Pendu\PenduConsole\bin\Debug\PenduConsole.exe
+C:\partage\Formation c#\Pendu\PenduConsole\bin\Debug\PenduConsole.pdb
+C:\partage\Formation c#\Pendu\PenduConsole\bin\Debug\Helper.dll
+C:\partage\Formation c#\Pendu\PenduConsole\bin\Debug\PenduMetier.dll
+C:\partage\Formation c#\Pendu\PenduConsole\bin\Debug\PenduMetier.pdb
+C:\partage\Formation c#\Pendu\PenduConsole\bin\Debug\Helper.pdb
+C:\partage\Formation c#\Pendu\PenduConsole\obj\Debug\PenduConsole.csprojResolveAssemblyReference.cache
+C:\partage\Formation c#\Pendu\PenduConsole\obj\Debug\PenduConsole.exe
+C:\partage\Formation c#\Pendu\PenduConsole\obj\Debug\PenduConsole.pdb
+C:\partage\Formation c#\Pendu\PenduConsole\bin\Debug\PenduPersistence.dll
+C:\partage\Formation c#\Pendu\PenduConsole\bin\Debug\PenduPersistence.pdb
+C:\Users\IB\Documents\Visual Studio 2015\Projects\Pendu\PenduConsole\bin\Debug\PenduConsole.exe.config
+C:\Users\IB\Documents\Visual Studio 2015\Projects\Pendu\PenduConsole\obj\Debug\PenduConsole.exe
+C:\Users\IB\Documents\Visual Studio 2015\Projects\Pendu\PenduConsole\obj\Debug\PenduConsole.pdb

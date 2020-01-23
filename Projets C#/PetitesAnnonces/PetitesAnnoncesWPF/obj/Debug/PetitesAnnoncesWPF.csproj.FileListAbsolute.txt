@@ -1,0 +1,14 @@
+C:\Users\IB\source\repos\PetitesAnnonces\PetitesAnnoncesWPF\bin\Debug\PetitesAnnoncesWPF.exe.config
+C:\Users\IB\source\repos\PetitesAnnonces\PetitesAnnoncesWPF\bin\Debug\PetitesAnnoncesWPF.exe
+C:\Users\IB\source\repos\PetitesAnnonces\PetitesAnnoncesWPF\bin\Debug\PetitesAnnoncesWPF.pdb
+C:\Users\IB\source\repos\PetitesAnnonces\PetitesAnnoncesWPF\obj\Debug\PetitesAnnoncesWPF.csprojAssemblyReference.cache
+C:\Users\IB\source\repos\PetitesAnnonces\PetitesAnnoncesWPF\obj\Debug\MainWindow.g.cs
+C:\Users\IB\source\repos\PetitesAnnonces\PetitesAnnoncesWPF\obj\Debug\App.g.cs
+C:\Users\IB\source\repos\PetitesAnnonces\PetitesAnnoncesWPF\obj\Debug\PetitesAnnoncesWPF_MarkupCompile.cache
+C:\Users\IB\source\repos\PetitesAnnonces\PetitesAnnoncesWPF\obj\Debug\PetitesAnnoncesWPF_MarkupCompile.lref
+C:\Users\IB\source\repos\PetitesAnnonces\PetitesAnnoncesWPF\obj\Debug\MainWindow.baml
+C:\Users\IB\source\repos\PetitesAnnonces\PetitesAnnoncesWPF\obj\Debug\PetitesAnnoncesWPF.g.resources
+C:\Users\IB\source\repos\PetitesAnnonces\PetitesAnnoncesWPF\obj\Debug\PetitesAnnoncesWPF.Properties.Resources.resources
+C:\Users\IB\source\repos\PetitesAnnonces\PetitesAnnoncesWPF\obj\Debug\PetitesAnnoncesWPF.csproj.GenerateResource.cache
+C:\Users\IB\source\repos\PetitesAnnonces\PetitesAnnoncesWPF\obj\Debug\PetitesAnnoncesWPF.exe
+C:\Users\IB\source\repos\PetitesAnnonces\PetitesAnnoncesWPF\obj\Debug\PetitesAnnoncesWPF.pdb

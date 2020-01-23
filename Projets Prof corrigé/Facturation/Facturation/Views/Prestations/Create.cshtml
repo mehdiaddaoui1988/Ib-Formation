@@ -1,0 +1,45 @@
+﻿@model Facturation.Models.Prestation
+
+
+
+
+<h1>@ViewBag.Title</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            @Html.HiddenFor(c => c.IdFacture)
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MontantHT" class="control-label"></label>
+                <input asp-for="MontantHT" class="form-control" />
+                <span asp-validation-for="MontantHT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TauxTVA" class="control-label"></label>
+                <input asp-for="TauxTVA" class="form-control" />
+                <span asp-validation-for="TauxTVA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Remarque" class="control-label"></label>
+                <input asp-for="Remarque" class="form-control" />
+                <span asp-validation-for="Remarque" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -1,0 +1,4 @@
+C:\partage\Formation c#\Calcul\CalculMetier\bin\Release\CalculMetier.dll
+C:\partage\Formation c#\Calcul\CalculMetier\bin\Release\CalculMetier.pdb
+C:\partage\Formation c#\Calcul\CalculMetier\obj\Release\CalculMetier.dll
+C:\partage\Formation c#\Calcul\CalculMetier\obj\Release\CalculMetier.pdb

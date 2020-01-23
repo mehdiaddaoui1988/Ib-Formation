@@ -1,0 +1,67 @@
+﻿@model Facturation.Models.Facture
+
+@{
+    ViewData["Title"] = "Details";
+}
+<h1 class="d-print-none">Facture @Html.DisplayFor(c => Model.Numero) pour <a asp-action="Details" asp-controller="Clients" asp-route-id="@Model.IdClient">@Model.Client.RaisonSociale</a></h1>
+@if (!Model.IsValidated)
+{
+    <h1 class="d-none d-print-block">Valider la facture avant impression</h1>
+}
+@if (!Model.IsValidated)
+{
+    <menu>
+
+        @if (Model.CanValidate)
+        {
+            <a href="@Url.Action("Valider","Factures",new { id=Model.Id })" class="btn btn-warning">Valider</a>
+
+        }
+        @if (Model.CanCreate)
+        {
+            <a href="@Url.Action("Create","Prestations",new { idFacture=Model.Id })" class="btn btn-warning">Ajouter une prestation</a>
+
+        }
+    </menu>
+    <hr />
+    <div class="dm-table">
+        <div role="header">
+            <div role="cell">@Html.DisplayNameFor(model => model.Prestations.First().Description)</div>
+            <div role="cell">@Html.DisplayNameFor(model => model.Prestations.First().MontantHT)</div>
+            <div role="cell">@Html.DisplayNameFor(model => model.Prestations.First().TauxTVA)</div>
+            <div role="cell">@Html.DisplayNameFor(model => model.Prestations.First().MontantTVA)</div>
+            <div role="cell">@Html.DisplayNameFor(model => model.Prestations.First().MontantTTC)</div>
+            <div role="cell"></div>
+
+        </div>
+
+
+
+        @foreach (var p in Model.Prestations)
+        {
+
+            <partial name="_prestation-item" model="@p" />
+
+        }
+        <div role="footer">
+            <div role="cell"></div>
+            <div role="cell">@Html.DisplayFor(c => c.MontantHT)</div>
+            <div role="cell"></div>
+            <div role="cell">@Html.DisplayFor(c => c.MontantTVA)</div>
+            <div role="cell">@Html.DisplayFor(c => c.MontantTTC)</div>
+            <div role="cell"></div>
+
+        </div>
+    </div>
+
+}
+
+else
+{
+    <partial name="_Print" model="@Model" />
+}
+
+
+@section styles{
+    <link href="~/css/facture.css" rel="stylesheet" />
+}

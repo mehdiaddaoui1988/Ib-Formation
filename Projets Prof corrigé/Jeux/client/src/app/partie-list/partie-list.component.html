@@ -1,0 +1,13 @@
+<h3>Liste des parties</h3>
+<input type="text" #name />
+<button (click)="createPartie(name.value)">Créer</button>
+<ul>
+  <li routerLink="/partie/{{ p.id }}" *ngFor="let p of parties">
+    {{ p.name }} ({{ p.sizeX }} x {{ p.sizeY }})
+  </li>
+</ul>
+<div
+  (mousemove)="increment()"
+  style="background-color: aqua;width: 100px;height: 100px;"
+></div>
+{{ count }}

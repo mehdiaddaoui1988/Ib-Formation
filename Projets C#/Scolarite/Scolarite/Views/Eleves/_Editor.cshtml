@@ -1,0 +1,21 @@
+﻿@model Scolarite.Models.Eleve
+<div class="form-group">
+    <label asp-for="Nom" class="control-label"></label>
+    <input asp-for="Nom" class="form-control" />
+    <span asp-validation-for="Nom" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Prenom" class="control-label"></label>
+    <input asp-for="Prenom" class="form-control" />
+    <span asp-validation-for="Prenom" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Remarque" class="control-label"></label>
+    <input asp-for="Remarque" class="form-control" />
+    <span asp-validation-for="Remarque" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="DateNaissance" class="control-label"></label>
+    <input type="date" asp-for="DateNaissance" class="form-control" />
+    <span asp-validation-for="DateNaissance" class="text-danger"></span>
+</div>

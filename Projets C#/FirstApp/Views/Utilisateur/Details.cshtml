@@ -1,0 +1,22 @@
+﻿@model FirstApp.Models.Utilisateur
+@{
+    ViewBag.Title = "Utilisateur : "+Model.Nom+" "+Model.Prenom;
+}
+
+<h2>Details</h2>
+<div class="form-group">
+    <label>@Html.DisplayNameFor(model => model.Nom)</label>
+    <div class="form-control">@Model.Nom</div>
+</div>
+<div class="form-group">
+    <label>@Html.DisplayNameFor(model => model.Prenom)</label>
+    <div class="form-control">@Model.Prenom</div>
+</div>
+<div class="form-group">
+    <label>@Html.DisplayNameFor(model => model.Mail)</label>
+    <div class="form-control">@Model.Mail</div>
+</div>
+<div class="form-group">
+    <label>Nombre de réponses</label>
+    <div class="form-control">@Model.Reponses.Count()</div>
+</div>

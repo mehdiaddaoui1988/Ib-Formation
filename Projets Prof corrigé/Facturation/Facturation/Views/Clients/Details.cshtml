@@ -1,0 +1,78 @@
+﻿@model Facturation.Models.Client
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Client : @Html.DisplayFor(model => model.RaisonSociale)</h1>
+
+<menu>
+    <a href="@Url.Action("Create","Factures",new { idClient=Model.Id })" class="btn btn-warning">Ajouter une facture</a>
+    <a href="@Url.Action("Create","Paiements",new { idClient=Model.Id })" class="btn btn-warning">Ajouter un paiement</a>
+
+</menu>
+<hr />
+<div class="alert alert-@((Model.Retard <= 0) ? "success":"danger")">Solde : @Html.DisplayFor(c=>c.Solde), à échéance : @Html.DisplayFor(c=>c.Retard)</div> 
+<hr />
+<div class="row">
+    <div class="col-lg-6">
+        <h4>Factures : @Html.DisplayFor(c => c.TotalDu)</h4>
+        <div class="dm-table links">
+            <div role="header">
+                <div role="cell">Numéro</div>
+                <div role="cell">Date Edition</div>
+                <div role="cell">Date d'échéance</div>
+                <div role="cell">Montant HT</div>
+            </div>
+            @foreach (var f in Model.Factures.OrderByDescending(c => c.DateCreation))
+            {
+                <div role="row" onclick="window.location='@Url.Action("Details","Factures",new { id=f.Id})'">
+                    <div role="cell">@Html.DisplayFor(c => f.Numero)</div>
+                    <div role="cell">@Html.DisplayFor(c => f.DateEdition)</div>
+                    <div role="cell">@Html.DisplayFor(c => f.DateEcheance)</div>
+                    <div role="cell">@Html.DisplayFor(c => f.MontantHT)</div>
+                </div>
+
+            }
+            <div role="footer">
+                <div role="cell"></div>
+                <div role="cell"></div>
+                <div role="cell"></div>
+
+                <div role="cell">@Html.DisplayFor(c => c.CA)</div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <h4>Paiements : @Html.DisplayFor(c => c.TotalPaiements)</h4>
+        <div class="dm-table links">
+            <div role="header">
+                <div role="cell">Montant</div>
+                <div role="cell">Date Réception</div>
+                <div role="cell">Date Banque</div>
+                <div role="cell">Moyen</div>
+            </div>
+            @foreach (var f in Model.Paiements.OrderByDescending(c => c.DateReception))
+            {
+                <div role="row" onclick="window.location='@Url.Action("Edit","Paiements", new{ id=f.Id})'">
+                    <div role="cell">@Html.DisplayFor(c => f.Montant)</div>
+                    <div role="cell">@Html.DisplayFor(c => f.DateReception)</div>
+                    <div role="cell">@Html.DisplayFor(c => f.DateBanque)</div>
+                    <div role="cell">@Html.DisplayFor(c => f.Moyen)</div>
+                </div>
+
+            }
+            <div role="footer">
+                <div role="cell"></div>
+                <div role="cell"></div>
+                <div role="cell"></div>
+
+                <div role="cell">@Html.DisplayFor(c => c.TotalPaiements)</div>
+
+            </div>
+        </div>
+    </div>
+   
+</div>
+

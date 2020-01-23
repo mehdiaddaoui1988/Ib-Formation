@@ -1,0 +1,72 @@
+﻿@model Medoc.Models.Patient
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Patient</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prenom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prenom)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <table class="table">
+        <tbody>
+            @foreach (Medoc.Models.Fait f in ViewBag.Faits)
+            {
+                <tr>
+                    <td>@f.Decsription</td>
+                    <td>
+                        @if (Model.Faits.Any(c => c.Id == f.Id))
+                        {
+                            <a href="/Patients/SwitchFait/@(Model.Id)?idFait=@f.Id">
+                                <img src="~/Images/ok.png" style="width:1.4em;" />
+                            </a>
+
+                        }
+                        else
+                        { <a href="/Patients/SwitchFait/@(Model.Id)?idFait=@f.Id">
+                                <img src="~/Images/pas-ok.png" style="width:1.4em;" />
+                            </a>
+
+                        }
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+      
+    </table>
+    <h3>Maladies</h3>
+   
+    <ul>
+        @foreach(var m in ((IEnumerable<Medoc.Controllers.Diagnostic>)ViewBag.diagnostics).OrderByDescending(c=>c.Probabilite))
+        {
+        <li>@m.Nom : @m.Probabilite</li>
+        }
+        
+    </ul>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillBucket", "BillBucket\BillBucket.csproj", "{A220F60C-96D6-4244-9634-AF3D0F7A30EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A220F60C-96D6-4244-9634-AF3D0F7A30EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A220F60C-96D6-4244-9634-AF3D0F7A30EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A220F60C-96D6-4244-9634-AF3D0F7A30EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A220F60C-96D6-4244-9634-AF3D0F7A30EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D1D15272-D4D7-46B2-9ED2-2ACE70EBB855}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,48 @@
+input {
+  padding: 10px 20px 10px 20px;
+  font-size: 28px;
+}
+
+.btn {
+  width: 100%;
+  border-radius: 20px;
+  transition: all 1s;
+  transform: none;
+}
+.btn:hover {
+  transition: all 1s;
+  transform: rotate(360deg);
+}
+#btnEgal {
+  width: 100%;
+  transition: all 1s;
+  border-radius: 100px;
+}
+
+#btnEgal:hover {
+  background-color: lightgreen;
+  transition: all 1s;
+}
+
+.operateur {
+  background-color: rgb(255, 254, 205);
+  font-size: 30px;
+}
+
+#ma-div {
+  text-align: center;
+}
+#ma-table {
+  display: inline-block;
+}
+#resultat {
+  border: solid 6px darkblue;
+  font-family: fantasy;
+}
+#clear {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+#clear:hover {
+  transition: all 3s;
+  transform: rotate(360deg);
+}

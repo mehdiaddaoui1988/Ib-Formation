@@ -1,0 +1,20 @@
+<h1>Bienvenue sur le jeu des cercles !</h1>
+
+<div id="surface-jeu" style="position:relative">
+
+  <div *ngFor="let cercle1 of boules" style="position:absolute;border-radius: 50%;display:inline-block"
+  
+    [style.background-color]="cercle1.colorFill" [style.border-color]="cercle1.colorBorder"
+    [style.left.px]="cercle1.posX" [style.top.px]="cercle1.posY" [style.width.px]="cercle1.rayon"
+    [style.height.px]="cercle1.rayon" id="cercle1">
+    <button (click)="cercle1.posX = cercle1.posX+ 10" style="position:absolute;" class="btn btn-right">></button>
+    <button (click)="cercle1.posX = cercle1.posX- 10" style="position:absolute;" class="btn btn-left">&lt;</button>
+    <button (click)="cercle1.posY = cercle1.posY+ 10" style="position:absolute;" class="btn btn-bottom">˅</button>
+    <button (click)="cercle1.posY = cercle1.posY- 10" style="position:absolute;" class="btn btn-top">^</button>
+
+  </div>
+
+
+
+
+</div>

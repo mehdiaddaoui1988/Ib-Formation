@@ -1,0 +1,46 @@
+﻿@model  IEnumerable<AppMaladies.Models.Fait>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+    function updateCheckedOptions() {
+        var elements = $(".formOptions li :checkbox:checked");
+
+        $('#renseignement').empty();
+
+        elements.each(function () {
+            var associateLabel = $(this).next('label');
+            $('#renseignement').append(associateLabel.html() + "<br>");
+        })
+    }
+</script>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-5">
+            <form>
+                @foreach (var f in Model)
+                {
+                    <div class="form-check formOptions">
+                        <li style="list-style:none">
+                            <input class="form-check-input" type="checkbox" value="@f.Id" id="@f.Id" onclick="updateCheckedOptions()">
+                            <label class="form-check-label" for="@f.Id">
+                                @f.Intitule
+                            </label>
+                        </li>
+                    </div>
+                }
+                <button type="submit" class="btn btn-primary mb-2">Valider mon diagnostic</button>
+            </form>
+
+        </div>
+        <div class="col-lg-7">
+            <h3> Mes renseignements</h3>
+            <div id="renseignement">
+            </div>
+        </div>
+    </div>
+</div>

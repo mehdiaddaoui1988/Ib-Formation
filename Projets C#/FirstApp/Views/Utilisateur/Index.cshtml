@@ -1,0 +1,38 @@
+﻿@model IEnumerable<FirstApp.Models.Utilisateur>
+
+@{
+    ViewBag.Title = "Liste des utilisateurs - " + @Model.Count();
+}
+<a class="btn btn-primary" href="@Url.Action("Create")">Ajouter un utilisateur</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Id)</th>
+            <th>@Html.DisplayNameFor(model => model.Nom)</th>
+            <th>@Html.DisplayNameFor(model => model.Prenom)</th>
+            <th>Liens</th>
+        </tr>
+
+
+    </thead>
+    <tbody>
+        @foreach (var q in Model)
+        {
+            <tr onclick="window.location='@Url.Action("Details",new { id=q.Id , a=4})'">
+                <td>@q.Id</td>
+                <td>@q.Nom</td>
+                <td>@q.Prenom</td>
+
+                <td></td>
+            </tr>
+        }
+
+
+    </tbody>
+
+</table>
+@for(var i = 1; i < ViewBag.Pages+1; i++)
+{
+    <a class="brn btn-primary" href="@Url.Action("Index",new { page = i })">@i</a>
+}
+

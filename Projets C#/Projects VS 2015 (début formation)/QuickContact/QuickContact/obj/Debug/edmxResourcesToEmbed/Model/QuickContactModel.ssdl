@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBContactModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TBL_Categories">
+    <Key>
+      <PropertyRef Name="PK_Categorie" />
+    </Key>
+    <Property Name="PK_Categorie" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Intitule" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TBL_Contacts">
+    <Key>
+      <PropertyRef Name="PK_Contact" />
+    </Key>
+    <Property Name="PK_Contact" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Nom" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Telephone" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FK_Categorie" Type="uniqueidentifier" />
+  </EntityType>
+  <Association Name="Tbl_Contacts_Categorie">
+    <End Role="TBL_Categories" Type="Self.TBL_Categories" Multiplicity="0..1" />
+    <End Role="TBL_Contacts" Type="Self.TBL_Contacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Categories">
+        <PropertyRef Name="PK_Categorie" />
+      </Principal>
+      <Dependent Role="TBL_Contacts">
+        <PropertyRef Name="FK_Categorie" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBContactModelStoreContainer">
+    <EntitySet Name="TBL_Categories" EntityType="Self.TBL_Categories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Contacts" EntityType="Self.TBL_Contacts" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="Tbl_Contacts_Categorie" Association="Self.Tbl_Contacts_Categorie">
+      <End Role="TBL_Categories" EntitySet="TBL_Categories" />
+      <End Role="TBL_Contacts" EntitySet="TBL_Contacts" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

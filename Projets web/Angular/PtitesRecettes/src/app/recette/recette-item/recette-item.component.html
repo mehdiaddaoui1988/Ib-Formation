@@ -1,0 +1,17 @@
+<div *ngIf="recette.imageUrl">
+  <img class="card-img-top" src="{{ recette.imageUrl }}" />
+</div>
+<div class="card-header">
+  <h3 class="card-title">{{ recette.nom }}</h3>
+  <h5 style="font-style:italic;">{{ recette.prix }}€</h5>
+</div>
+<div class="card-body" style="font-size: 18px;color:rgb(255, 255, 196)">
+  <p class="card-text description-card">{{ recette.description }}</p>
+  <div *ngIf="!recette.contientGluten">
+    <hr />
+    <p style="font-weight: bold;" class="card-text">
+      Sans gluten
+    </p>
+  </div>
+</div>
+<div class="card-footer">{{ recette.categorie }}</div>

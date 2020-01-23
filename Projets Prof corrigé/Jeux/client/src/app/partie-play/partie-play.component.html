@@ -1,0 +1,13 @@
+<h3>Partie : {{ partie.name }}</h3>
+{{ message }}
+<table class="grid">
+  <tbody>
+    <tr *ngFor="let ligne of partie.grid; let y = index">
+      <td
+        class="{{ partie.type }}{{ cell }}"
+        (click)="play(x, y)"
+        *ngFor="let cell of ligne; let x = index"
+      ></td>
+    </tr>
+  </tbody>
+</table>

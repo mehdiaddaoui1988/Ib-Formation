@@ -1,0 +1,10 @@
+C:\Users\baten\Downloads\Calcul\CalculMetier\bin\Debug\CalculMetier.dll
+C:\Users\baten\Downloads\Calcul\CalculMetier\bin\Debug\CalculMetier.pdb
+C:\Users\baten\Downloads\Calcul\CalculMetier\obj\Debug\CalculMetier.csprojAssemblyReference.cache
+C:\Users\baten\Downloads\Calcul\CalculMetier\obj\Debug\CalculMetier.dll
+C:\Users\baten\Downloads\Calcul\CalculMetier\obj\Debug\CalculMetier.pdb
+C:\Users\IB\Documents\Visual Studio 2015\Projects\Calcul\CalculMetier\bin\Debug\CalculMetier.dll
+C:\Users\IB\Documents\Visual Studio 2015\Projects\Calcul\CalculMetier\bin\Debug\CalculMetier.pdb
+C:\Users\IB\Documents\Visual Studio 2015\Projects\Calcul\CalculMetier\obj\Debug\CalculMetier.csprojResolveAssemblyReference.cache
+C:\Users\IB\Documents\Visual Studio 2015\Projects\Calcul\CalculMetier\obj\Debug\CalculMetier.dll
+C:\Users\IB\Documents\Visual Studio 2015\Projects\Calcul\CalculMetier\obj\Debug\CalculMetier.pdb

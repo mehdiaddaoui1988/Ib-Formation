@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Partie>
+  <NombreDeQuestions>4</NombreDeQuestions>
+  <NombreMaxDesValeurs>10</NombreMaxDesValeurs>
+  <Etat>1</Etat>
+  <Questions>
+    <Question Nombre1="5" Nombre2="4" Operateur="1" BonneReponse="20" 
+              DateQuestionPosee="2019-10-12T06:27:43.768"
+              NombreDeTentativesDeReponse="4"
+               DateReponse="2019-10-12T06:27:43.772"
+              > </Question>
+      <Question Nombre1="2" Nombre2="3" Operateur="0" BonneReponse="20"
+             DateQuestionPosee="2019-10-12T06:27:43.768"
+             NombreDeTentativesDeReponse="4"
+              DateReponse="2019-10-12T06:27:43.772"
+              >
+    </Question>
+  </Questions>
+</Partie>

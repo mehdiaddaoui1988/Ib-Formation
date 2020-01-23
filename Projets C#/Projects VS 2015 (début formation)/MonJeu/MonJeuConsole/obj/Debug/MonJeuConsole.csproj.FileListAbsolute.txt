@@ -1,0 +1,6 @@
+C:\Users\IB\documents\visual studio 2015\Projects\MonJeu\MonJeuConsole\bin\Debug\MonJeuConsole.exe.config
+C:\Users\IB\documents\visual studio 2015\Projects\MonJeu\MonJeuConsole\bin\Debug\MonJeuConsole.exe
+C:\Users\IB\documents\visual studio 2015\Projects\MonJeu\MonJeuConsole\bin\Debug\MonJeuConsole.pdb
+C:\Users\IB\documents\visual studio 2015\Projects\MonJeu\MonJeuConsole\obj\Debug\MonJeuConsole.csprojResolveAssemblyReference.cache
+C:\Users\IB\documents\visual studio 2015\Projects\MonJeu\MonJeuConsole\obj\Debug\MonJeuConsole.exe
+C:\Users\IB\documents\visual studio 2015\Projects\MonJeu\MonJeuConsole\obj\Debug\MonJeuConsole.pdb

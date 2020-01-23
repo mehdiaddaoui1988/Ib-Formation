@@ -1,0 +1,56 @@
+<div id="surface-config">
+    <h2>Configuration</h2>
+    <p>Bienvenue dans mon jeu</p>
+    <form id="formulaire-config">
+
+        <div class="form-group">
+            <label for="input-nombreMaximum">Nombre maximum</label>
+            <input type="number" class="form-control" required min="1" max="1000000" value="100"
+                id="input-nombreMaximum" placeholder="Entrez le nombre maximum">
+        </div>
+        <!-- TODO: Assurer la validation -->
+        <div class="form-group">
+            <label for="input-nombreEssaisMax">Nombre maximum d'essais</label>
+            <input type="number" class="form-control" required min="1" max="20" value="7" id="input-nombreEssaisMax"
+                placeholder="Entrez le nombre maximum d'essais">
+        </div>
+        <button type="reset" class="btn btn-primary">Reset</button>
+        <button type="submit" class="btn btn-primary">Commencer</button>
+    </form>
+
+
+</div>
+<div id="surface-jeu" class="invisible">
+    <h2>Surface de jeu</h2>
+    <form id="formulaire-jeu">
+        <div class="form-group">
+            <label for="input-nombreMaximum">Tentez un nombre</label>
+            <input id="input-nombreTente" type="number" class="form-control" required min="0"
+                placeholder="Entrez le nombre à tenter">
+        </div>
+        <button type="submit" class="btn btn-primary">Tenter</button>
+
+        <table id="table-resultats" class="table invisible">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Date</th>
+                    <th>Résultat</th>
+                </tr>
+            </thead>
+            <tbody id="tbody-resultats">
+
+            </tbody>
+        </table>
+    </form>
+
+</div>
+<div id="surface-gagne" class="invisible">
+    <h2>Vous avez gagné</h2>
+    <button class="bouton-rejouer btn btn-primary">Rejouer</button>
+</div>
+<div id="surface-perdu" class="invisible">
+    <h2>Vous avez perdu</h2>
+    <button class="bouton-rejouer btn btn-primary">Rejouer</button>
+</div>
+<script src="/juste-nombre/juste-nombre.js"></script>

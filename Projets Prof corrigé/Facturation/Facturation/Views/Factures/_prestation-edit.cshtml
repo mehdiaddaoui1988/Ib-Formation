@@ -1,0 +1,19 @@
+﻿@model Prestation
+
+    <form class="dm-table" asp-controller="Prestations" asp-action="edit" asp-route-id="@Model.Id">
+        @Html.HiddenFor(c => c.IdFacture);
+      
+        <div role="row">
+            <div role="cell">@Html.EditorFor(c => c.Description)</div>
+            <div role="cell">@Html.EditorFor(c => c.MontantHT)</div>
+            <div role="cell">@Html.EditorFor(c => c.TauxTVA)</div>
+            <div role="cell">@Html.EditorFor(c => c.Remarque)</div>
+            <div role="cell">
+                <button class="btn btn-warning" type="submit">Ok</button>
+            </div>
+
+
+        </div>
+
+
+    </form>

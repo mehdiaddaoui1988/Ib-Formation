@@ -1,0 +1,30 @@
+﻿@model FirstApp.Models.Utilisateur
+@{
+    ViewBag.Title = "Create";
+}
+
+
+<h2>Création d'un utilisateur</h2>
+@Html.BeginForm(){
+    <div class="form-group">
+        <label>@Html.DisplayNameFor(model => model.Nom)</label>
+       @Html.TextBoxFor(c => c.Nom, new { @class="form-control" })
+        @Html.ValidationMessageFor(c=>c.Nom)
+    </div>
+    <div class="form-group">
+        <label>@Html.DisplayNameFor(model=>model.Prenom)</label>
+        <input name="Prenom" type="text" maxlength="50" required class="form-control" value="@Model.Prenom" />
+    </div>
+    <div class="form-group">
+        <label>@Html.DisplayNameFor(model => model.Mail)</label>
+        <input name="Mail" type="email" maxlength="200" required class="form-control" value="@Model.Mail" />
+    </div>
+    <div class="form-group">
+        <label>@Html.DisplayNameFor(model => model.Password)</label>
+        <input name="Pass" type="password" required class="form-control" value="@Model.Password" />
+    </div>
+    <button type="submit">Soumettre</button>
+    <button type="reset">Réinitialiser</button>
+}
+
+

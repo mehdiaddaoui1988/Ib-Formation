@@ -1,0 +1,14 @@
+C:\partage\Formation c#\Calcul\CalculPersistence\bin\Debug\CalculPersistence.dll
+C:\partage\Formation c#\Calcul\CalculPersistence\bin\Debug\CalculPersistence.pdb
+C:\partage\Formation c#\Calcul\CalculPersistence\bin\Debug\CalculMetier.dll
+C:\partage\Formation c#\Calcul\CalculPersistence\bin\Debug\CalculMetier.pdb
+C:\partage\Formation c#\Calcul\CalculPersistence\obj\Debug\CalculPersistence.csprojResolveAssemblyReference.cache
+C:\partage\Formation c#\Calcul\CalculPersistence\obj\Debug\CalculPersistence.dll
+C:\partage\Formation c#\Calcul\CalculPersistence\obj\Debug\CalculPersistence.pdb
+C:\Users\IB\Documents\Visual Studio 2015\Projects\Calcul\CalculPersistence\bin\Debug\CalculPersistence.dll
+C:\Users\IB\Documents\Visual Studio 2015\Projects\Calcul\CalculPersistence\bin\Debug\CalculPersistence.pdb
+C:\Users\IB\Documents\Visual Studio 2015\Projects\Calcul\CalculPersistence\bin\Debug\CalculMetier.dll
+C:\Users\IB\Documents\Visual Studio 2015\Projects\Calcul\CalculPersistence\bin\Debug\CalculMetier.pdb
+C:\Users\IB\Documents\Visual Studio 2015\Projects\Calcul\CalculPersistence\obj\Debug\CalculPersistence.csprojResolveAssemblyReference.cache
+C:\Users\IB\Documents\Visual Studio 2015\Projects\Calcul\CalculPersistence\obj\Debug\CalculPersistence.dll
+C:\Users\IB\Documents\Visual Studio 2015\Projects\Calcul\CalculPersistence\obj\Debug\CalculPersistence.pdb

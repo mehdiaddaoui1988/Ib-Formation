@@ -1,0 +1,5 @@
+C:\Users\IB\documents\visual studio 2015\Projects\MonJeu\MonJeuMetier\bin\Debug\MonJeuMetier.dll
+C:\Users\IB\documents\visual studio 2015\Projects\MonJeu\MonJeuMetier\bin\Debug\MonJeuMetier.pdb
+C:\Users\IB\documents\visual studio 2015\Projects\MonJeu\MonJeuMetier\obj\Debug\MonJeuMetier.dll
+C:\Users\IB\documents\visual studio 2015\Projects\MonJeu\MonJeuMetier\obj\Debug\MonJeuMetier.pdb
+C:\Users\IB\documents\visual studio 2015\Projects\MonJeu\MonJeuMetier\obj\Debug\MonJeuMetier.csprojResolveAssemblyReference.cache

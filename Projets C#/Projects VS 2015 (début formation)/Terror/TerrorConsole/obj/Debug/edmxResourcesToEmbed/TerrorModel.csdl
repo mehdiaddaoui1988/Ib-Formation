@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TerrorDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Competence">
+    <Key>
+      <PropertyRef Name="IdCompetence" />
+    </Key>
+    <Property Name="IdCompetence" Type="Guid" Nullable="false" />
+    <Property Name="Intitule" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SavoirFaires" Relationship="Self.TBL_Terroristes_CompetencesTOCompetences" FromRole="TBL_Competences" ToRole="TBL_Terroristes_Competences" />
+  </EntityType>
+  <EntityType Name="Organisation">
+    <Key>
+      <PropertyRef Name="IdOrganisation" />
+    </Key>
+    <Property Name="IdOrganisation" Type="Guid" Nullable="false" />
+    <Property Name="Nom" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Lieu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateCreation" Type="DateTime" Nullable="false" Precision="7" />
+    <NavigationProperty Name="Terroristes" Relationship="Self.FK_TBL_Terroristes_ToTBL_Organisations" FromRole="TBL_Organisations" ToRole="TBL_Terroristes" />
+  </EntityType>
+  <EntityType Name="Terroriste">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Nom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Prenom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Alias" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Telephone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="IdParrain" Type="Guid" />
+    <Property Name="IdOrganisation" Type="Guid" />
+    <Property Name="MiseAPrix" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="NombreDeVictimes" Type="Int32" Nullable="false" />
+    <Property Name="Taille" Type="Double" />
+    <Property Name="EstMort" Type="Boolean" />
+    <NavigationProperty Name="Organisation" Relationship="Self.FK_TBL_Terroristes_ToTBL_Organisations" FromRole="TBL_Terroristes" ToRole="TBL_Organisations" />
+    <NavigationProperty Name="Filleuls" Relationship="Self.FK_TBL_Terroristes_ToTBL_Terroristes" FromRole="TBL_Terroristes" ToRole="TBL_Terroristes1" />
+    <NavigationProperty Name="Parrain" Relationship="Self.FK_TBL_Terroristes_ToTBL_Terroristes" FromRole="TBL_Terroristes1" ToRole="TBL_Terroristes" />
+    <NavigationProperty Name="SavoirFaires" Relationship="Self.TBL_Terroristes_CompetencesTOTerroristes" FromRole="TBL_Terroristes" ToRole="TBL_Terroristes_Competences" />
+  </EntityType>
+  <EntityType Name="SavoirFaire">
+    <Key>
+      <PropertyRef Name="IdTerroriste" />
+      <PropertyRef Name="IdCompetence" />
+    </Key>
+    <Property Name="IdTerroriste" Type="Guid" Nullable="false" />
+    <Property Name="IdCompetence" Type="Guid" Nullable="false" />
+    <Property Name="Niveau" Type="Byte" Nullable="false" />
+    <NavigationProperty Name="Competence" Relationship="Self.TBL_Terroristes_CompetencesTOCompetences" FromRole="TBL_Terroristes_Competences" ToRole="TBL_Competences" />
+    <NavigationProperty Name="Terroriste" Relationship="Self.TBL_Terroristes_CompetencesTOTerroristes" FromRole="TBL_Terroristes_Competences" ToRole="TBL_Terroristes" />
+  </EntityType>
+  <Association Name="TBL_Terroristes_CompetencesTOCompetences">
+    <End Role="TBL_Competences" Type="TerrorDBModel.Competence" Multiplicity="1" />
+    <End Role="TBL_Terroristes_Competences" Type="TerrorDBModel.SavoirFaire" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Competences">
+        <PropertyRef Name="IdCompetence" />
+      </Principal>
+      <Dependent Role="TBL_Terroristes_Competences">
+        <PropertyRef Name="IdCompetence" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Terroristes_ToTBL_Organisations">
+    <End Role="TBL_Organisations" Type="TerrorDBModel.Organisation" Multiplicity="0..1" />
+    <End Role="TBL_Terroristes" Type="TerrorDBModel.Terroriste" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Organisations">
+        <PropertyRef Name="IdOrganisation" />
+      </Principal>
+      <Dependent Role="TBL_Terroristes">
+        <PropertyRef Name="IdOrganisation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Terroristes_ToTBL_Terroristes">
+    <End Role="TBL_Terroristes" Type="TerrorDBModel.Terroriste" Multiplicity="0..1" />
+    <End Role="TBL_Terroristes1" Type="TerrorDBModel.Terroriste" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Terroristes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TBL_Terroristes1">
+        <PropertyRef Name="IdParrain" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TBL_Terroristes_CompetencesTOTerroristes">
+    <End Role="TBL_Terroristes" Type="TerrorDBModel.Terroriste" Multiplicity="1" />
+    <End Role="TBL_Terroristes_Competences" Type="TerrorDBModel.SavoirFaire" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Terroristes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TBL_Terroristes_Competences">
+        <PropertyRef Name="IdTerroriste" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TerrorDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Competences" EntityType="TerrorDBModel.Competence" />
+    <EntitySet Name="Organisations" EntityType="TerrorDBModel.Organisation" />
+    <EntitySet Name="Terroristes" EntityType="TerrorDBModel.Terroriste" />
+    <EntitySet Name="SavoirFaires" EntityType="TerrorDBModel.SavoirFaire" />
+    <AssociationSet Name="TBL_Terroristes_CompetencesTOCompetences" Association="Self.TBL_Terroristes_CompetencesTOCompetences">
+      <End Role="TBL_Competences" EntitySet="Competences" />
+      <End Role="TBL_Terroristes_Competences" EntitySet="SavoirFaires" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Terroristes_ToTBL_Organisations" Association="Self.FK_TBL_Terroristes_ToTBL_Organisations">
+      <End Role="TBL_Organisations" EntitySet="Organisations" />
+      <End Role="TBL_Terroristes" EntitySet="Terroristes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Terroristes_ToTBL_Terroristes" Association="Self.FK_TBL_Terroristes_ToTBL_Terroristes">
+      <End Role="TBL_Terroristes" EntitySet="Terroristes" />
+      <End Role="TBL_Terroristes1" EntitySet="Terroristes" />
+    </AssociationSet>
+    <AssociationSet Name="TBL_Terroristes_CompetencesTOTerroristes" Association="Self.TBL_Terroristes_CompetencesTOTerroristes">
+      <End Role="TBL_Terroristes" EntitySet="Terroristes" />
+      <End Role="TBL_Terroristes_Competences" EntitySet="SavoirFaires" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

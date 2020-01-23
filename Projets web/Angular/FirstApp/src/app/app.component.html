@@ -1,0 +1,19 @@
+<h1> {{title}}</h1>
+<label title="{{user.nom}}">Nom : </label>
+<input value="{{user.nom}}" type="text">
+
+<p [class.danger]="counter<0" title="la valeur est {{counter}}">La valeur du compteur est {{counter}} </p>
+<button (click)="modifyCounter()">Augmenter le compteur</button>
+<br>
+<button (click)="modifyCounter(-1)">Retrancher au compteur</button>
+
+
+<h2>Mes amis philosophes</h2>
+<ul>
+  <li [class.danger]="a.credit<=0" *ngFor="let a of users">
+    {{a.nom}} {{a.prenom}} {{a.credit}}
+    <button (click)="modifyCredit(a,1)">+1</button>
+    <button (click)="modifyCredit(a,-1)">-1</button>&nbsp;
+    <button *ngIf="a.credit<=0" (click)="deleteUser(a)">X</button>
+  </li>
+</ul>

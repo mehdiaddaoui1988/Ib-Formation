@@ -1,0 +1,5 @@
+C:\partage\Formation c#\Pendu\PenduMetier\bin\Debug\PenduMetier.dll
+C:\partage\Formation c#\Pendu\PenduMetier\bin\Debug\PenduMetier.pdb
+C:\partage\Formation c#\Pendu\PenduMetier\obj\Debug\PenduMetier.csprojResolveAssemblyReference.cache
+C:\partage\Formation c#\Pendu\PenduMetier\obj\Debug\PenduMetier.dll
+C:\partage\Formation c#\Pendu\PenduMetier\obj\Debug\PenduMetier.pdb

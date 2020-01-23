@@ -1,0 +1,30 @@
+#surface-jeu {
+  width: auto;
+  height: 1200px;
+  background-color: lightgoldenrodyellow;
+}
+.btn {
+  text-align: center;
+  height: 30px;
+  width: 30px;
+}
+.btn-left {
+  @extend .btn;
+  left: 10px;
+  top: calc(50% - 15px);
+}
+.btn-right {
+  @extend .btn;
+  right: 10px;
+  top: calc(50% - 15px);
+}
+.btn-top {
+  @extend .btn;
+  top: 10px;
+  left: calc(50% - 15px);
+}
+.btn-bottom {
+  @extend .btn;
+  bottom: 10px;
+  left: calc(50% - 15px);
+}

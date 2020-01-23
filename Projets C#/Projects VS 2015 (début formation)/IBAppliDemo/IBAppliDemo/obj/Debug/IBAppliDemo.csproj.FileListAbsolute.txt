@@ -1,0 +1,6 @@
+c:\users\ib\documents\visual studio 2015\Projects\IBAppliDemo\IBAppliDemo\bin\Debug\IBAppliDemo.exe.config
+c:\users\ib\documents\visual studio 2015\Projects\IBAppliDemo\IBAppliDemo\bin\Debug\IBAppliDemo.exe
+c:\users\ib\documents\visual studio 2015\Projects\IBAppliDemo\IBAppliDemo\bin\Debug\IBAppliDemo.pdb
+c:\users\ib\documents\visual studio 2015\Projects\IBAppliDemo\IBAppliDemo\obj\Debug\IBAppliDemo.csprojResolveAssemblyReference.cache
+c:\users\ib\documents\visual studio 2015\Projects\IBAppliDemo\IBAppliDemo\obj\Debug\IBAppliDemo.exe
+c:\users\ib\documents\visual studio 2015\Projects\IBAppliDemo\IBAppliDemo\obj\Debug\IBAppliDemo.pdb

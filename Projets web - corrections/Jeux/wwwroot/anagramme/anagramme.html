@@ -1,0 +1,41 @@
+<form id="surface-config">
+    <div class="form-group">
+        <label for="input-nombreLettres">Nombre de lettres</label>
+        <input type="number" class="form-control" required min="3" max="14" value="6" id="input-nombreLettres"
+            placeholder="Entrez le nombre de lettres">
+    </div>
+
+    <button type="reset" class="btn btn-primary">Reset</button>
+    <button id="bouton-submit-config" type="submit" class="btn btn-primary">Commencer</button>
+
+</form>
+<form id="surface-jeu" style="display: none;">
+    <div class="jumbotron">
+        <h1 id="affichage-lettres"></h1>
+    </div>
+    <div class="form-group">
+        <label for="input-motTente">Votre mot</label>
+        <input type="text" class="form-control" required id="input-motTente" placeholder="Entrez le mot tente">
+    </div>
+
+    <button id="bouton-tenter" type="submit" class="btn btn-primary">Tenter</button>
+    <button id="bouton-reponse" type="button" class="btn btn-primary">Réponse</button>
+    <p id="texte-indication"></p>
+    <ul id="liste-mots">
+
+    </ul>
+</form>
+<form id="surface-gagne" style="display: none;">
+    <div class="jumbotron">
+        <h1>Gagné</h1>
+
+    </div>
+    <button class="bouton-retour btn btn-primary" type="button">Recommencer</button>
+
+</form>
+<form id="surface-abandon" style="display: none;">
+    <button class="bouton-retour btn btn-warning" type="button">Recommencer</button>
+
+</form>
+<img id="image-waiting" style="display: none;" src="/images/loading.gif">
+<script src="/anagramme/anagramme.js"></script>

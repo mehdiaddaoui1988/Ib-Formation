@@ -1,0 +1,7 @@
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuPendu\JeuPenduPersistence\bin\Debug\JeuPenduPersistence.dll
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuPendu\JeuPenduPersistence\bin\Debug\JeuPenduPersistence.pdb
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuPendu\JeuPenduPersistence\bin\Debug\JeuPenduMetier.dll
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuPendu\JeuPenduPersistence\bin\Debug\JeuPenduMetier.pdb
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuPendu\JeuPenduPersistence\obj\Debug\JeuPenduPersistence.csprojResolveAssemblyReference.cache
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuPendu\JeuPenduPersistence\obj\Debug\JeuPenduPersistence.dll
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuPendu\JeuPenduPersistence\obj\Debug\JeuPenduPersistence.pdb

@@ -1,0 +1,16 @@
+<div *ngIf="ingredients; else vide"
+>
+  <div class="row">
+    <div class="col-md-4 text-center" *ngFor="let i of ingredients">
+      {{ i.nom }}
+      <br />
+      {{ i.poids }}g
+      <p *ngIf="i.isBio" style="color:green;font-weight: bold;">
+        {{ i.isBio ? " Bio" : "" }}
+      </p>
+
+      <hr />
+    </div>
+  </div>
+</div>
+<ng-template #vide>En attente de résultats</ng-template>

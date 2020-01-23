@@ -1,0 +1,9 @@
+﻿USE DBAnnonces
+GO
+
+CREATE TABLE tbl_Categories(
+	PK_Categorie UNIQUEIDENTIFIER NOT NULL PRIMARY KEY DEFAULT newid(),
+	Intitule VARCHAR(100) NOT NULL,
+
+
+)

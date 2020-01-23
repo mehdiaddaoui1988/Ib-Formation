@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TerrorDBModelStoreContainer" CdmEntityContainer="TerrorDBEntities">
+    <EntitySetMapping Name="Competences">
+      <EntityTypeMapping TypeName="TerrorDBModel.Competence">
+        <MappingFragment StoreEntitySet="TBL_Competences">
+          <ScalarProperty Name="IdCompetence" ColumnName="PK_Competence" />
+          <ScalarProperty Name="Intitule" ColumnName="Intitule" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Organisations">
+      <EntityTypeMapping TypeName="TerrorDBModel.Organisation">
+        <MappingFragment StoreEntitySet="TBL_Organisations">
+          <ScalarProperty Name="IdOrganisation" ColumnName="PK_Organisation" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Lieu" ColumnName="Lieu" />
+          <ScalarProperty Name="DateCreation" ColumnName="DateCreation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Terroristes">
+      <EntityTypeMapping TypeName="TerrorDBModel.Terroriste">
+        <MappingFragment StoreEntitySet="TBL_Terroristes">
+          <ScalarProperty Name="Id" ColumnName="PK_Terroriste" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Prenom" ColumnName="Prenom" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="IdParrain" ColumnName="FK_Parain" />
+          <ScalarProperty Name="IdOrganisation" ColumnName="FK_Organisation" />
+          <ScalarProperty Name="MiseAPrix" ColumnName="MiseAPrix" />
+          <ScalarProperty Name="NombreDeVictimes" ColumnName="NombreDeVictimes" />
+          <ScalarProperty Name="Taille" ColumnName="Taille" />
+          <ScalarProperty Name="EstMort" ColumnName="EstMort" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SavoirFaires">
+      <EntityTypeMapping TypeName="TerrorDBModel.SavoirFaire">
+        <MappingFragment StoreEntitySet="TBL_Terroristes_Competences">
+          <ScalarProperty Name="IdTerroriste" ColumnName="FK_Terroriste" />
+          <ScalarProperty Name="IdCompetence" ColumnName="FK_Competence" />
+          <ScalarProperty Name="Niveau" ColumnName="Niveau" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

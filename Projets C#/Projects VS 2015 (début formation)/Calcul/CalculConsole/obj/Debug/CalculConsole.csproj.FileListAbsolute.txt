@@ -1,0 +1,24 @@
+C:\partage\Formation c#\Calcul\CalculConsole\bin\Debug\CalculConsole.exe.config
+C:\partage\Formation c#\Calcul\CalculConsole\bin\Debug\CalculConsole.exe
+C:\partage\Formation c#\Calcul\CalculConsole\bin\Debug\CalculConsole.pdb
+C:\partage\Formation c#\Calcul\CalculConsole\bin\Debug\CalculMetier.dll
+C:\partage\Formation c#\Calcul\CalculConsole\bin\Debug\Helper.dll
+C:\partage\Formation c#\Calcul\CalculConsole\bin\Debug\CalculMetier.pdb
+C:\partage\Formation c#\Calcul\CalculConsole\bin\Debug\Helper.pdb
+C:\partage\Formation c#\Calcul\CalculConsole\obj\Debug\CalculConsole.csprojResolveAssemblyReference.cache
+C:\partage\Formation c#\Calcul\CalculConsole\obj\Debug\CalculConsole.exe
+C:\partage\Formation c#\Calcul\CalculConsole\obj\Debug\CalculConsole.pdb
+C:\partage\Formation c#\Calcul\CalculConsole\bin\Debug\CalculPersistence.dll
+C:\partage\Formation c#\Calcul\CalculConsole\bin\Debug\CalculPersistence.pdb
+C:\Users\IB\Documents\Visual Studio 2015\Projects\Calcul\CalculConsole\bin\Debug\CalculConsole.exe.config
+C:\Users\IB\Documents\Visual Studio 2015\Projects\Calcul\CalculConsole\obj\Debug\CalculConsole.exe
+C:\Users\IB\Documents\Visual Studio 2015\Projects\Calcul\CalculConsole\obj\Debug\CalculConsole.pdb
+C:\Users\IB\Documents\Visual Studio 2015\Projects\Calcul\CalculConsole\bin\Debug\CalculConsole.exe
+C:\Users\IB\Documents\Visual Studio 2015\Projects\Calcul\CalculConsole\bin\Debug\CalculConsole.pdb
+C:\Users\IB\Documents\Visual Studio 2015\Projects\Calcul\CalculConsole\bin\Debug\CalculMetier.dll
+C:\Users\IB\Documents\Visual Studio 2015\Projects\Calcul\CalculConsole\bin\Debug\CalculPersistence.dll
+C:\Users\IB\Documents\Visual Studio 2015\Projects\Calcul\CalculConsole\bin\Debug\Helper.dll
+C:\Users\IB\Documents\Visual Studio 2015\Projects\Calcul\CalculConsole\bin\Debug\CalculMetier.pdb
+C:\Users\IB\Documents\Visual Studio 2015\Projects\Calcul\CalculConsole\bin\Debug\CalculPersistence.pdb
+C:\Users\IB\Documents\Visual Studio 2015\Projects\Calcul\CalculConsole\bin\Debug\Helper.pdb
+C:\Users\IB\Documents\Visual Studio 2015\Projects\Calcul\CalculConsole\obj\Debug\CalculConsole.csprojResolveAssemblyReference.cache

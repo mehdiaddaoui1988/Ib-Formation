@@ -1,0 +1,7 @@
+C:\Users\IB\documents\visual studio 2015\Projects\MonJeu\MonJeuMetier.tests\bin\Debug\MonJeuMetier.tests.dll
+C:\Users\IB\documents\visual studio 2015\Projects\MonJeu\MonJeuMetier.tests\bin\Debug\MonJeuMetier.tests.pdb
+C:\Users\IB\documents\visual studio 2015\Projects\MonJeu\MonJeuMetier.tests\bin\Debug\MonJeuMetier.dll
+C:\Users\IB\documents\visual studio 2015\Projects\MonJeu\MonJeuMetier.tests\bin\Debug\MonJeuMetier.pdb
+C:\Users\IB\documents\visual studio 2015\Projects\MonJeu\MonJeuMetier.tests\obj\Debug\MonJeuMetier.tests.csprojResolveAssemblyReference.cache
+C:\Users\IB\documents\visual studio 2015\Projects\MonJeu\MonJeuMetier.tests\obj\Debug\MonJeuMetier.tests.dll
+C:\Users\IB\documents\visual studio 2015\Projects\MonJeu\MonJeuMetier.tests\obj\Debug\MonJeuMetier.tests.pdb

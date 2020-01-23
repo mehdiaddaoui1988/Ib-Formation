@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Le CV de Guillaume Verschave</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./index.js"></script>
+  </head>
+
+  <body>
+    <h1>Mon <span>CV</span></h1>
+    <p>Salaire souhaité&nbsp;: 12&nbsp;000&nbsp;€&nbsp;/&nbsp;Mois</p>
+    <h2>Scolarité</h2>
+
+    <p id="remarque">Voici mon parcours scolaire :</p>
+    <!-- Liste descriptive : des titres et leur description -->
+    <dl>
+      <dt>2013</dt>
+      <dd>Baccalauréat S</dd>
+      <dt>2018</dt>
+      <dd>Diplome de développeur logiciel</dd>
+    </dl>
+    <h2>Expériences professionnelles</h2>
+    <table>
+      <!-- entète de la table -->
+      <thead>
+        <tr>
+          <th>Année</th>
+          <th>Société</th>
+          <th>Fonction</th>
+        </tr>
+      </thead>
+      <!-- Partie données de la table -->
+      <tbody>
+        <tr>
+          <th>2018</th>
+          <td>CHU Lille</td>
+          <td>Développeur stagiaire</td>
+        </tr>
+        <tr>
+          <th>2024</th>
+          <td>SpaceX</td>
+          <td>Astronaute</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Compétences</h2>
+    <dl>
+      <dt id="net">.NET</dt>
+      <dd id="detail-net" class="invisible">Le meilleur développeur microsoft</dd>
+
+      <dt>Angular</dt>
+      <dd class="invisible">Angular professionnal</dd>
+
+      <dt>Git</dt>
+      <dd class="invisible">Git gud</dd>
+
+      <dt>Anglais</dt>
+      <dd class="invisible">Me speak good</dd>
+    </dl>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+﻿@page "/groaz-detail/{Id:guid}"
+@using Models
+@using Services
+@inject GroazHttpService  service
+<h3>GroazDetails</h3>
+@if (Groaz == null)
+{
+    <div>Attendez...</div>
+}
+else
+{
+<div class="form-group">
+    <label>DateNaissance</label>
+    <div class="form-control">@Groaz.DateNaissance</div>
+</div>
+<div class="form-group">
+    <label>Niveau de Bins</label>
+    <div class="form-control">@Groaz.NiveauDeBins</div>
+</div>
+<div class="form-group">
+    <label>Trut</label>
+    <div class="form-control">@Groaz.Trut</div>
+</div>
+
+}
+
+@code {
+    Groaz Groaz;
+    private int _Id;
+
+    [Parameter]
+    public Guid Id { get; set; }
+
+    protected async override Task OnParametersSetAsync()
+    {
+        this.Groaz = await service.getDetails(Id);
+
+    }
+
+
+}

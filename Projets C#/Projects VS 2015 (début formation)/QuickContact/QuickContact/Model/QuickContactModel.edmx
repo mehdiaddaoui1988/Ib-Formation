@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DBContactModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TBL_Categories">
+          <Key>
+            <PropertyRef Name="PK_Categorie" />
+          </Key>
+          <Property Name="PK_Categorie" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Intitule" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TBL_Contacts">
+          <Key>
+            <PropertyRef Name="PK_Contact" />
+          </Key>
+          <Property Name="PK_Contact" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Nom" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Telephone" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FK_Categorie" Type="uniqueidentifier" />
+        </EntityType>
+        <Association Name="Tbl_Contacts_Categorie">
+          <End Role="TBL_Categories" Type="Self.TBL_Categories" Multiplicity="0..1" />
+          <End Role="TBL_Contacts" Type="Self.TBL_Contacts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_Categories">
+              <PropertyRef Name="PK_Categorie" />
+            </Principal>
+            <Dependent Role="TBL_Contacts">
+              <PropertyRef Name="FK_Categorie" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DBContactModelStoreContainer">
+          <EntitySet Name="TBL_Categories" EntityType="Self.TBL_Categories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_Contacts" EntityType="Self.TBL_Contacts" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="Tbl_Contacts_Categorie" Association="Self.Tbl_Contacts_Categorie">
+            <End Role="TBL_Categories" EntitySet="TBL_Categories" />
+            <End Role="TBL_Contacts" EntitySet="TBL_Contacts" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBContactModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Contact">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Nom" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Telephone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IdCategorie" Type="Guid" />
+          <NavigationProperty Name="Categorie" Relationship="DBContactModel.Tbl_Contacts_Categorie" FromRole="Contact" ToRole="TBL_Categories" />
+        </EntityType>
+        <EntityContainer Name="MaDAL" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Contacts" EntityType="DBContactModel.Contact" />
+          <EntitySet Name="Categories" EntityType="DBContactModel.Categorie" />
+          <AssociationSet Name="Tbl_Contacts_Categorie" Association="DBContactModel.Tbl_Contacts_Categorie">
+            <End Role="TBL_Categories" EntitySet="Categories" />
+            <End Role="Contact" EntitySet="Contacts" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Categorie">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Intitule" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Contacts" Relationship="DBContactModel.Tbl_Contacts_Categorie" FromRole="TBL_Categories" ToRole="Contact" />
+        </EntityType>
+        <Association Name="Tbl_Contacts_Categorie">
+          <End Type="DBContactModel.Categorie" Role="TBL_Categories" Multiplicity="0..1" />
+          <End Type="DBContactModel.Contact" Role="Contact" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_Categories">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Contact">
+              <PropertyRef Name="IdCategorie" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DBContactModelStoreContainer" CdmEntityContainer="MaDAL">
+          <EntitySetMapping Name="Contacts">
+            <EntityTypeMapping TypeName="DBContactModel.Contact">
+              <MappingFragment StoreEntitySet="TBL_Contacts">
+                <ScalarProperty Name="IdCategorie" ColumnName="FK_Categorie" />
+                <ScalarProperty Name="Id" ColumnName="PK_Contact" />
+                <ScalarProperty Name="Nom" ColumnName="Nom" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="DBContactModel.Categorie">
+              <MappingFragment StoreEntitySet="TBL_Categories">
+                <ScalarProperty Name="Intitule" ColumnName="Intitule" />
+                <ScalarProperty Name="Id" ColumnName="PK_Categorie" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

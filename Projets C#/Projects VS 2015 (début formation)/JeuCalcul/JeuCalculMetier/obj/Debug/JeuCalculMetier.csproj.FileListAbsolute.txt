@@ -1,0 +1,10 @@
+C:\Users\baten\Downloads\JeuCalcul\JeuCalculMetier\bin\Debug\JeuCalculMetier.dll
+C:\Users\baten\Downloads\JeuCalcul\JeuCalculMetier\bin\Debug\JeuCalculMetier.pdb
+C:\Users\baten\Downloads\JeuCalcul\JeuCalculMetier\obj\Debug\JeuCalculMetier.csprojAssemblyReference.cache
+C:\Users\baten\Downloads\JeuCalcul\JeuCalculMetier\obj\Debug\JeuCalculMetier.dll
+C:\Users\baten\Downloads\JeuCalcul\JeuCalculMetier\obj\Debug\JeuCalculMetier.pdb
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuCalcul\JeuCalculMetier\obj\Debug\JeuCalculMetier.csprojResolveAssemblyReference.cache
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuCalcul\JeuCalculMetier\obj\Debug\JeuCalculMetier.dll
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuCalcul\JeuCalculMetier\obj\Debug\JeuCalculMetier.pdb
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuCalcul\JeuCalculMetier\bin\Debug\JeuCalculMetier.dll
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuCalcul\JeuCalculMetier\bin\Debug\JeuCalculMetier.pdb

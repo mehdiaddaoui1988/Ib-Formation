@@ -1,0 +1,11 @@
+c:\users\ib\documents\visual studio 2015\Projects\Terror\TerrorConsole\bin\Debug\TerrorConsole.exe.config
+C:\Users\IB\documents\visual studio 2015\Projects\Terror\TerrorConsole\bin\Debug\TerrorConsole.exe
+C:\Users\IB\documents\visual studio 2015\Projects\Terror\TerrorConsole\bin\Debug\TerrorConsole.pdb
+C:\Users\IB\documents\visual studio 2015\Projects\Terror\TerrorConsole\bin\Debug\EntityFramework.dll
+C:\Users\IB\documents\visual studio 2015\Projects\Terror\TerrorConsole\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\IB\documents\visual studio 2015\Projects\Terror\TerrorConsole\bin\Debug\EntityFramework.xml
+C:\Users\IB\documents\visual studio 2015\Projects\Terror\TerrorConsole\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\IB\documents\visual studio 2015\Projects\Terror\TerrorConsole\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\IB\documents\visual studio 2015\Projects\Terror\TerrorConsole\obj\Debug\TerrorConsole.csprojResolveAssemblyReference.cache
+C:\Users\IB\documents\visual studio 2015\Projects\Terror\TerrorConsole\obj\Debug\TerrorConsole.exe
+C:\Users\IB\documents\visual studio 2015\Projects\Terror\TerrorConsole\obj\Debug\TerrorConsole.pdb

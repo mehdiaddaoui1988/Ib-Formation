@@ -1,0 +1,5 @@
+C:\partage\Formation c#\Calcul\CalculMetier\bin\Debug\CalculMetier.dll
+C:\partage\Formation c#\Calcul\CalculMetier\bin\Debug\CalculMetier.pdb
+C:\partage\Formation c#\Calcul\CalculMetier\obj\Debug\CalculMetier.dll
+C:\partage\Formation c#\Calcul\CalculMetier\obj\Debug\CalculMetier.pdb
+C:\partage\Formation c#\Calcul\CalculMetier\obj\Debug\CalculMetier.csprojResolveAssemblyReference.cache

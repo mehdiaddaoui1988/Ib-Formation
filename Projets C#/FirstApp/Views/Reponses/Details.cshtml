@@ -1,0 +1,50 @@
+﻿@model FirstApp.Models.Reponse
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Reponse</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Question.Text)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Question.Text)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Utilisateur.Nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Utilisateur.Nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valeur)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valeur)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateReponse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateReponse)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

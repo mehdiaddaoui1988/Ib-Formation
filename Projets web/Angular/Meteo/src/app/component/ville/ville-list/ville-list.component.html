@@ -1,0 +1,45 @@
+<div *ngIf="villesAffichees; else attente">
+  <div style="text-align: center;">
+    <input
+      type="text"
+      #inputTextRecherche
+      (input)="ChangeTextRecherche(inputTextRecherche.value)"
+    />
+    <br />
+    Texte recherché : {{ texteRecherche }}
+  </div>
+
+  <h3>
+    Nombre de villes trouvées :
+    <span style="color:red">{{ villesAffichees.length }}</span>
+  </h3>
+
+  <div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+      <div
+        *ngFor="
+          let v of villesAffichees;
+          let i = index;
+          let o = odd;
+          let l = last
+        "
+      >
+        <ville-item
+          [class.selected]="v == villeSelectionnee"
+          [ville]="v"
+          (click)="villeSelectionnee = v"
+        ></ville-item>
+        <hr *ngIf="!l" />
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-8 col-xl-9" *ngIf="villeSelectionnee">
+      <h4>Ville sélectionnée</h4>
+      <ville-details [ville]="villeSelectionnee"></ville-details>
+    </div>
+  </div>
+</div>
+
+<ng-template #attente>
+  En attente de données
+</ng-template>

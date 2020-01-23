@@ -1,0 +1,14 @@
+C:\Users\IB\documents\visual studio 2015\Projects\Terror\TerrorWPF\bin\Debug\TerrorWPF.exe.config
+C:\Users\IB\documents\visual studio 2015\Projects\Terror\TerrorWPF\bin\Debug\TerrorWPF.exe
+C:\Users\IB\documents\visual studio 2015\Projects\Terror\TerrorWPF\bin\Debug\TerrorWPF.pdb
+C:\Users\IB\documents\visual studio 2015\Projects\Terror\TerrorWPF\obj\Debug\TerrorWPF.csprojResolveAssemblyReference.cache
+C:\Users\IB\documents\visual studio 2015\Projects\Terror\TerrorWPF\obj\Debug\MainWindow.g.cs
+C:\Users\IB\documents\visual studio 2015\Projects\Terror\TerrorWPF\obj\Debug\App.g.cs
+C:\Users\IB\documents\visual studio 2015\Projects\Terror\TerrorWPF\obj\Debug\TerrorWPF_MarkupCompile.cache
+C:\Users\IB\documents\visual studio 2015\Projects\Terror\TerrorWPF\obj\Debug\TerrorWPF_MarkupCompile.lref
+C:\Users\IB\documents\visual studio 2015\Projects\Terror\TerrorWPF\obj\Debug\MainWindow.baml
+C:\Users\IB\documents\visual studio 2015\Projects\Terror\TerrorWPF\obj\Debug\TerrorWPF.g.resources
+C:\Users\IB\documents\visual studio 2015\Projects\Terror\TerrorWPF\obj\Debug\TerrorWPF.Properties.Resources.resources
+C:\Users\IB\documents\visual studio 2015\Projects\Terror\TerrorWPF\obj\Debug\TerrorWPF.csproj.GenerateResource.Cache
+C:\Users\IB\documents\visual studio 2015\Projects\Terror\TerrorWPF\obj\Debug\TerrorWPF.exe
+C:\Users\IB\documents\visual studio 2015\Projects\Terror\TerrorWPF\obj\Debug\TerrorWPF.pdb

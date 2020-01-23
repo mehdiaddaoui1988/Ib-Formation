@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickContact", "QuickContact\QuickContact.csproj", "{532C4B4B-9B40-498D-BAE3-CABD266A8CCF}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "CreationBDD", "CreationBDD\CreationBDD.sqlproj", "{32CF0037-CB99-4033-8FE0-DB67ED0E9CBB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{532C4B4B-9B40-498D-BAE3-CABD266A8CCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{532C4B4B-9B40-498D-BAE3-CABD266A8CCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{532C4B4B-9B40-498D-BAE3-CABD266A8CCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{532C4B4B-9B40-498D-BAE3-CABD266A8CCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32CF0037-CB99-4033-8FE0-DB67ED0E9CBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32CF0037-CB99-4033-8FE0-DB67ED0E9CBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32CF0037-CB99-4033-8FE0-DB67ED0E9CBB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{32CF0037-CB99-4033-8FE0-DB67ED0E9CBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32CF0037-CB99-4033-8FE0-DB67ED0E9CBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32CF0037-CB99-4033-8FE0-DB67ED0E9CBB}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

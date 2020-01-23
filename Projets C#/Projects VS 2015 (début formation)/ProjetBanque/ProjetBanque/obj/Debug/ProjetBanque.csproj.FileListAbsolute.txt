@@ -1,0 +1,6 @@
+c:\users\ib\documents\visual studio 2015\Projects\ProjetBanque\ProjetBanque\bin\Debug\ProjetBanque.exe.config
+c:\users\ib\documents\visual studio 2015\Projects\ProjetBanque\ProjetBanque\bin\Debug\ProjetBanque.exe
+c:\users\ib\documents\visual studio 2015\Projects\ProjetBanque\ProjetBanque\bin\Debug\ProjetBanque.pdb
+c:\users\ib\documents\visual studio 2015\Projects\ProjetBanque\ProjetBanque\obj\Debug\ProjetBanque.csprojResolveAssemblyReference.cache
+c:\users\ib\documents\visual studio 2015\Projects\ProjetBanque\ProjetBanque\obj\Debug\ProjetBanque.exe
+c:\users\ib\documents\visual studio 2015\Projects\ProjetBanque\ProjetBanque\obj\Debug\ProjetBanque.pdb

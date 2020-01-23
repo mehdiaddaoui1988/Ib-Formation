@@ -1,0 +1,7 @@
+C:\partage\Formation c#\Calcul\Demos\bin\Debug\Demos.dll
+C:\partage\Formation c#\Calcul\Demos\bin\Debug\Demos.pdb
+C:\partage\Formation c#\Calcul\Demos\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\partage\Formation c#\Calcul\Demos\bin\Debug\fr\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+C:\partage\Formation c#\Calcul\Demos\obj\Debug\Demos.csprojResolveAssemblyReference.cache
+C:\partage\Formation c#\Calcul\Demos\obj\Debug\Demos.dll
+C:\partage\Formation c#\Calcul\Demos\obj\Debug\Demos.pdb

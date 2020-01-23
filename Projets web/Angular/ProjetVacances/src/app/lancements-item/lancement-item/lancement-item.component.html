@@ -1,0 +1,17 @@
+  <li class="list-group-item">
+    <h2>
+      {{ lancement.dateLancement.toLocaleDateString("fr-FR", options) }}
+    </h2>
+    <h3>Mission :</h3>
+  </li>
+  <li class="list-group-item">{{ lancement.descriptionMission }}</li>
+  <li class="list-group-item">
+    {{ lancement.chargeUtile }},
+    <span style="font-weight: bold;"
+      >{{ lancement.poidsChargeUtile }} kg</span
+    >
+  </li>
+  <li class="list-group-item">
+    {{ lancement.etatAtterrissage }}
+  </li>
+  <!-- <li class="list-group-item">{{ lancement.fusee.modele }}</li> -->

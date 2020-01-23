@@ -1,0 +1,117 @@
+﻿@model BillBucket.Models.Facture
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="noprint">Details</h1>
+
+<div class="container">
+    <div id="mailBody" class="jumbotron">
+        <h4>Facture n°@Model.NumeroFacture</h4>
+        <hr />
+        <div class="row">
+
+            <div class="col-md-4">
+                <h1>Entreprise BillBucket</h1>
+            </div>
+
+            <div class="col-md-1"></div>
+
+            <div class="col-md-7">
+                <div class="list-group">
+                    <div class="list-group-item list-group-item-action flex-column align-items-start ">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">@Html.DisplayNameFor(c => c.Client.Nom)</h5>
+                        </div>
+                        <p class="mb-1">@Model.Client.Nom </p>
+                    </div>
+
+                    <div class="list-group-item list-group-item-action flex-column align-items-start ">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">@Html.DisplayNameFor(c => c.Client.NumeroSiret)</h5>
+                        </div>
+                        <p class="mb-1">@Model.Client.NumeroSiret </p>
+                    </div>
+
+                    <div class="list-group-item list-group-item-action flex-column align-items-start ">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">@Html.DisplayNameFor(c => c.Client.Adresse)</h5>
+                        </div>
+                        <p class="mb-1">@Model.Client.Adresse </p>
+                    </div>
+
+                    <div class="list-group-item list-group-item-action flex-column align-items-start ">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">@Html.DisplayNameFor(c => c.Client.NumeroTelephone)</h5>
+                        </div>
+                        <p class="mb-1">@Model.Client.NumeroTelephone </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="row">
+            <div style="border:dotted 1px black" class="col-md-4">
+                <h5>@Html.DisplayNameFor(c => c.Description)</h5>
+                <p>@Model.Description</p>
+                <h5>@Html.DisplayNameFor(c => c.DateEmission)</h5>
+                <p>@Model.DateEmission.ToShortDateString()</p>
+            </div>
+            <div class="col-md-8">
+                <table class="table table-bordered table-light table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Prestation</th>
+                            <th>Prix</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Prestations)
+                        {
+                            <tr>
+                                <td>@item.Nom</td>
+                                <td>@item.Montant €</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <hr />  
+                <div class="text-md-right">
+
+                <h5>TOTAL : @ViewBag.MontantTotal €</h5>
+                <h5>TOTAL TTC : <span style="text-decoration:underline">@ViewBag.MontantTotalTVA €</span></h5>
+                </div>
+                <a class="noprint" asp-action="Create" asp-controller="Prestations" asp-route-idFacture="@Model.Id">Ajouter une prestation</a>
+            </div>
+        </div>
+        <div class="noprint">
+            
+            @if (ViewBag.EtatPaiement)
+            {
+                <small>Facture réglée le @Model.DateReglement.ToShortDateString()</small>
+            }
+            else
+            {
+                <small>Facture non réglée, émise le @Model.DateEmission.ToShortDateString()</small>
+            }
+        </div>
+
+
+        <br />
+        <div class="noprint">
+            <button class="btn  btn-sm btn-primary" onclick="window.print()">Imprimer la facture</button>
+            <button class="btn btn-sm btn-primary">Envoyer la facture par mail</button>
+            <a class="btn btn-sm btn-secondary" href="mailto:@Model.Client.Mail">Contacter @Model.Client.Nom</a>
+        </div>
+    </div>
+    <div class="noprint">
+        <a asp-action="Edit" asp-route-id="@Model.Id">Modifier la facture</a> |
+        <a asp-action="Index">Retour à la liste de factures</a>
+    </div>
+</div>
+
+

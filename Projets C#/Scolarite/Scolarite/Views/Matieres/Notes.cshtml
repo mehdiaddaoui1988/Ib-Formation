@@ -1,0 +1,32 @@
+﻿
+@model Matiere
+@{
+    ViewData["Title"] = "Notes";
+}
+
+<h1>Notes pour la matière @Model.Nom</h1>
+
+<input id="date" type="date"  class="form-control" value="@(((DateTime)ViewData["Date"]).ToString("yyyy-MM-dd"))" />
+<div style="display:table" class="table">
+    @foreach (var e in (IEnumerable<Eleve>)ViewData["Eleves"])
+    {
+    <div id="@e.Id" style="display:table-row" >
+        <input name="IdEleve" type="hidden" value="" />
+        <input name="IdMatiere" type="hidden" value="" />
+        <input name="Date" type="hidden" value="" />
+        <div style="display:table-cell">@e.Nom @e.Prenom</div>
+
+        <div style="display:table-cell"><input  class="note form-control" type="number" value="" /></div>
+        <div style="display:table-cell"><input name="Appreciation" class="appreciation form-control" type="text" /></div>
+        <div style="display:table-cell"><button type="submit" class="btn btn-success">Ok</button></div>
+        <script>
+            $.getJSON("/api/Eval/@Model.Id/@e.Id/" + $("#date").val()).then(ev => {
+                $("#@e.Id .note").val(ev.note);
+                    $("#@e.Id .appreciation").val(ev.appreciation);
+            })
+        </script>
+    </div>
+            }
+    </div>
+
+

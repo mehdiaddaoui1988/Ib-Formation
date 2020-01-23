@@ -1,0 +1,12 @@
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuPendu\JeuPenduCounsole\bin\Debug\JeuPenduCounsole.exe.config
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuPendu\JeuPenduCounsole\obj\Debug\JeuPenduCounsole.exe
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuPendu\JeuPenduCounsole\obj\Debug\JeuPenduCounsole.pdb
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuPendu\JeuPenduCounsole\bin\Debug\JeuPenduCounsole.exe
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuPendu\JeuPenduCounsole\bin\Debug\JeuPenduCounsole.pdb
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuPendu\JeuPenduCounsole\bin\Debug\JeuPenduMetier.dll
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuPendu\JeuPenduCounsole\bin\Debug\JeuPenduMetier.pdb
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuPendu\JeuPenduCounsole\obj\Debug\JeuPenduConsole.csprojResolveAssemblyReference.cache
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuPendu\JeuPenduCounsole\bin\Debug\Helper.dll
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuPendu\JeuPenduCounsole\bin\Debug\Helper.pdb
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuPendu\JeuPenduCounsole\bin\Debug\JeuPenduPersistence.dll
+C:\Users\IB\Documents\Visual Studio 2015\Projects\JeuPendu\JeuPenduCounsole\bin\Debug\JeuPenduPersistence.pdb

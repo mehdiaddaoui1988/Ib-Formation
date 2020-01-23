@@ -1,0 +1,30 @@
+﻿@model IEnumerable<FirstApp.Models.Question>
+
+@{ 
+    ViewBag.Title = "Liste des questions - "+@Model.Count();
+}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Texte</th>
+                <th>Details</th>
+            </tr>
+          
+     
+        </thead>
+        <tbody>
+            @foreach (var q in Model)
+            {
+                <tr>
+                    <td>@q.Id</td>
+                    <td>@q.Text</td>
+                    <td><a href="/Question/Details/@q.Id">Détails</a></td>
+                </tr>
+            }
+
+
+        </tbody>
+    </table>
+

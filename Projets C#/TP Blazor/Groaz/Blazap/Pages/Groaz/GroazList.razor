@@ -1,0 +1,25 @@
+﻿@page "/groaz-list"
+@using Services
+@inject GroazHttpService service;
+@using Models
+@using DTOs
+<h3>Liste des groaz</h3>
+@if (GroazSet!=null)
+{    
+    @foreach (var g in GroazSet)
+    {
+        <a  href="groaz-detail/@g.Id">
+                <GroazItem Groaz="@g"/>
+            </a>
+    }
+}
+
+@code {
+    IEnumerable<Groaz> GroazSet;
+
+    protected async override Task OnInitializedAsync()
+    {
+
+        this.GroazSet = await this.service.getGroazSet();
+    }
+}
