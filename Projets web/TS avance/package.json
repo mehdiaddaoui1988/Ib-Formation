@@ -11,6 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "common-js": "^0.3.8",
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   }
 }
